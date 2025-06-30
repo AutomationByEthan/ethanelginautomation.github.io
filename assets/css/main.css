@@ -1362,7 +1362,7 @@ input, select, textarea {
 					 min-width: 8rem !important; /* Increased for better fit */
 					 max-width: 10rem !important; /* Caps width to prevent excessive growth */
 					 line-height: 1.2em !important; /* Explicit unit for clarity */
-					 padding: 0.5em 1.25rem !important; /* Symmetrical padding */
+					 padding: 0.5em 1.5rem !important; /* Symmetrical padding */
 					 text-transform: uppercase !important;
 					 letter-spacing: 0.1rem !important; /* Further reduced */
 					 font-size: 0.8rem !important;

@@ -1357,33 +1357,37 @@ input, select, textarea {
 				}
 
 				#header nav ul li a {
-   					display: block;
-    					white-space: normal;
-    					min-width: 7.5rem;
-    					/* height: 2.75rem; /* Remove or increase if wrapping occurs */
-    					line-height: 1.2; /* Adjust for multi-line text */
-    					padding: 0 1.25rem 0 1.45rem;
-   	 				text-transform: uppercase;
-    					letter-spacing: 0.2rem;
-    					font-size: 0.8rem;
-    					border-bottom: 0;
+					 display: block !important; /* Overrides any conflicting display */
+					 white-space: normal !important; /* Ensures wrapping */
+					 min-width: 8rem !important; /* Increased for better fit */
+					 max-width: 10rem !important; /* Caps width to prevent excessive growth */
+					 line-height: 1.2em !important; /* Explicit unit for clarity */
+					 padding: 0.5em 1.25rem !important; /* Symmetrical padding */
+					 text-transform: uppercase !important;
+					 letter-spacing: 0.1rem !important; /* Further reduced */
+					 font-size: 0.8rem !important;
+					 border-bottom: 0 !important;
+					 box-sizing: border-box !important; /* Includes padding in width */
+					 overflow-wrap: break-word !important; /* Alternative to white-space for wrapping */
 				}
 
-					#header nav ul li a:hover {
-						background-color: rgba(255, 255, 255, 0.075);
-					}
-
-					#header nav ul li a:active {
-						background-color: rgba(255, 255, 255, 0.175);
-					}
-
+				#header nav ul li a:hover {
+				 background-color: rgba(255, 255, 255, 0.075) !important;
+				}
+				
+				#header nav ul li a:active {
+				 background-color: rgba(255, 255, 255, 0.175) !important;
+				}
+				
 				@media (max-width: 768px) {
-   				 	#header nav ul li a {
-       				 	font-size: 0.7rem;
-        				padding: 0 1rem;
-        				min-width: 6rem;
-    				}
-}
+					 #header nav ul li a {
+						 font-size: 0.7rem !important;
+						 padding: 0.4em 1rem !important;
+						 min-width: 6rem !important;
+						 max-width: 8rem !important;
+					 }
+				}
+
 
 		#header nav.use-middle:after {
 			content: '';

@@ -1357,16 +1357,16 @@ input, select, textarea {
 				}
 
 				#header nav ul li a {
-					display: block;
-					white-space: normal; /* Allows text to wrap */
-					min-width: 7.5rem;
-					height: 2.75rem;
-					line-height: 2.75rem;
-					padding: 0 1.25rem 0 1.45rem;
-					text-transform: uppercase;
-					letter-spacing: 0.2rem;
-					font-size: 0.8rem;
-					border-bottom: 0;
+   					display: block;
+    					white-space: normal;
+    					min-width: 7.5rem;
+    					/* height: 2.75rem; /* Remove or increase if wrapping occurs */
+    					line-height: 1.2; /* Adjust for multi-line text */
+    					padding: 0 1.25rem 0 1.45rem;
+   	 				text-transform: uppercase;
+    					letter-spacing: 0.2rem;
+    					font-size: 0.8rem;
+    					border-bottom: 0;
 				}
 
 					#header nav ul li a:hover {
@@ -1376,6 +1376,14 @@ input, select, textarea {
 					#header nav ul li a:active {
 						background-color: rgba(255, 255, 255, 0.175);
 					}
+
+				@media (max-width: 768px) {
+   				 	#header nav ul li a {
+       				 	font-size: 0.7rem;
+        				padding: 0 1rem;
+        				min-width: 6rem;
+    				}
+}
 
 		#header nav.use-middle:after {
 			content: '';

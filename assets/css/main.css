@@ -1362,7 +1362,7 @@ input, select, textarea {
 					 min-width: 8rem !important; /* Increased for better fit */
 					 max-width: 10rem !important; /* Caps width to prevent excessive growth */
 					 line-height: 1.2em !important; /* Explicit unit for clarity */
-					 padding: 0.5em 2rem 0.5em 1.25rem !important;
+					 padding: 0.5em 1.5rem 0.5em 1.5rem !important;
 					 text-transform: uppercase !important;
 					 letter-spacing: 0.1rem !important; /* Further reduced */
 					 font-size: 0.8rem !important;
@@ -1379,13 +1379,28 @@ input, select, textarea {
 				 background-color: rgba(255, 255, 255, 0.175) !important;
 				}
 				
+				/* Mobile-specific styles */
 				@media (max-width: 768px) {
-					 #header nav ul li a {
-						 font-size: 0.7rem !important;
-						 padding: 0.4em 1rem !important;
-						 min-width: 6rem !important;
-						 max-width: 8rem !important;
-					 }
+				    #header nav ul li a {
+					font-size: 0.85rem !important; /* Increased from 0.7rem for better readability */
+					padding: 0.4em 1rem !important; /* Reduced padding */
+					min-width: 6.5rem !important;
+					max-width: 8rem !important; /* Reduced max-width */
+				    }
+				}
+				
+				/* Desktop-specific styles */
+				@media (min-width: 769px) {
+				    #header nav ul li a {
+					padding: 0.5em 3rem 0.5em 1.5rem !important; /* Increased right padding for desktop */
+					min-width: 9rem !important;
+					max-width: 11rem !important;
+				    }
+				
+				    #header nav ul li a[href="#work"] { /* Target "Why Choose Us" specifically */
+					padding-right: 3.5rem !important; /* Extra right padding */
+					min-width: 10rem !important; /* Matches inline success */
+				    }
 				}
 
 

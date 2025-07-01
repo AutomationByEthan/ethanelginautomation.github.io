@@ -1356,38 +1356,34 @@ input, select, textarea {
 					border-left: 0;
 				}
 
-				#header nav ul li a {
-					 display: block !important; /* Overrides any conflicting display */
-					 white-space: normal !important; /* Ensures wrapping */
-					 min-width: 8rem !important; /* Increased for better fit */
-					 max-width: 10rem !important; /* Caps width to prevent excessive growth */
-					 line-height: 1.2em !important; /* Explicit unit for clarity */
-					 padding: 0.5em 1.5rem 0.5em 1.5rem !important;
-					 text-transform: uppercase !important;
-					 letter-spacing: 0.1rem !important; /* Further reduced */
-					 font-size: 0.8rem !important;
-					 border-bottom: 0 !important;
-					 box-sizing: border-box !important; /* Includes padding in width */
-					 overflow-wrap: break-word !important; /* Alternative to white-space for wrapping */
+				#header nav ul li {
+				padding-left: 0;
+				border-left: solid 1px #ffffff;
+			}
+
+				#header nav ul li:first-child {
+					border-left: 0;
 				}
 
-				#header nav ul li a:hover {
-				 background-color: rgba(255, 255, 255, 0.075) !important;
+				#header nav ul li a {
+					display: block;
+					min-width: 7.5rem;
+					height: 2.75rem;
+					line-height: 2.75rem;
+					padding: 0 1.25rem 0 1.45rem;
+					text-transform: uppercase;
+					letter-spacing: 0.2rem;
+					font-size: 0.8rem;
+					border-bottom: 0;
 				}
-				
-				#header nav ul li a:active {
-				 background-color: rgba(255, 255, 255, 0.175) !important;
-				}
-				
-				/* Mobile-specific styles */
-				@media (max-width: 768px) {
-				    #header nav ul li a {
-					font-size: 0.85rem !important; /* Increased from 0.7rem for better readability */
-					padding: 0.4em 1rem !important; /* Reduced padding */
-					min-width: 6.5rem !important;
-					max-width: 8rem !important; /* Reduced max-width */
-				    }
-				}
+
+					#header nav ul li a:hover {
+						background-color: rgba(255, 255, 255, 0.075);
+					}
+
+					#header nav ul li a:active {
+						background-color: rgba(255, 255, 255, 0.175);
+					}
 				
 				/* Desktop-specific styles */
 				@media (min-width: 769px) {

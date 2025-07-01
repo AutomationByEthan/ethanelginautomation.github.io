@@ -1384,22 +1384,7 @@ input, select, textarea {
 					#header nav ul li a:active {
 						background-color: rgba(255, 255, 255, 0.175);
 					}
-				
-				/* Desktop-specific styles */
-				@media (min-width: 769px) {
-				    #header nav ul li a {
-					padding: 0.5em 3rem 0.5em 1.5rem !important; /* Increased right padding for desktop */
-					min-width: 9rem !important;
-					max-width: 11rem !important;
-				    }
-				
-				    #header nav ul li a[href="#work"] { /* Target "Why Choose Us" specifically */
-					padding-right: 3.5rem !important; /* Extra right padding */
-					min-width: 10rem !important; /* Matches inline success */
-				    }
-				}
-
-
+			
 		#header nav.use-middle:after {
 			content: '';
 			display: block;

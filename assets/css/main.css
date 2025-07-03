@@ -1335,46 +1335,97 @@ input, select, textarea {
 				line-height: 2;
 			}
 
-		#header nav ul {
-			display: -moz-flex;
-			display: -webkit-flex;
-			display: -ms-flex;
-			display: flex;
-			margin-bottom: 0;
-			list-style: none;
-			padding-left: 0;
-			border: solid 1px #ffffff;
-			border-radius: 4px;
-		}
-
-			#header nav ul li {
-				padding-left: 0;
-				border-left: solid 1px #ffffff;
+			/* Base styles for all screens */
+			#header nav ul {
+			    display: -moz-flex;
+			    display: -webkit-flex;
+			    display: -ms-flex;
+			    display: flex;
+			    justify-content: center; /* Center the group of items */
+			    align-items: stretch; /* Stretch items to equal height */
+			    margin-bottom: 0;
+			    list-style: none;
+			    padding-left: 0;
+			    border: solid 1px #ffffff;
+			    border-radius: 4px;
 			}
-
-				#header nav ul li:first-child {
-					border-left: 0;
-				}
-
-				#header nav ul li a {
-					display: block;
-					min-width: 7.5rem;
-					height: 2.75rem;
-					line-height: 2.75rem;
-					padding: 0 1.25rem 0 1.45rem;
-					text-transform: uppercase;
-					letter-spacing: 0.2rem;
-					font-size: 0.8rem;
-					border-bottom: 0;
-				}
-
-					#header nav ul li a:hover {
-						background-color: rgba(255, 255, 255, 0.075);
-					}
-
-					#header nav ul li a:active {
-						background-color: rgba(255, 255, 255, 0.175);
-					}
+			
+			#header nav ul li {
+			    padding-left: 0;
+			    border-left: solid 1px #ffffff;
+			    flex: 1; /* Distribute equal width to each li */
+			}
+			
+			#header nav ul li:first-child {
+			    border-left: 0;
+			}
+			
+			#header nav ul li a {
+			    display: flex;
+			    justify-content: center; /* Center text horizontally */
+			    align-items: center; /* Center text vertically */
+			    min-width: 0; /* Allow flex to adjust width */
+			    width: 100%; /* Fill the li */
+			    height: 3.5rem; /* Adjusted for two lines */
+			    line-height: 1.2rem; /* Allow multiple lines */
+			    padding: 0 1rem; /* Symmetric padding */
+			    text-transform: uppercase;
+			    letter-spacing: 0.2rem;
+			    font-size: 0.8rem;
+			    border-bottom: 0;
+			    white-space: normal; /* Enable text wrapping */
+			    overflow-wrap: break-word; /* Break words if needed */
+			    text-align: center; /* Ensure centered text */
+			}
+			
+			#header nav ul li a:hover {
+			    background-color: rgba(255, 255, 255, 0.075);
+			}
+			
+			#header nav ul li a:active {
+			    background-color: rgba(255, 255, 255, 0.175);
+			}
+			
+			/* Mobile-specific styles (assuming Dimension template default) */
+			@media (max-width: 480px) {
+			    #header nav ul {
+			        -moz-flex-direction: column;
+			        -webkit-flex-direction: column;
+			        -ms-flex-direction: column;
+			        flex-direction: column;
+			        min-width: 10rem;
+			        max-width: 100%;
+			    }
+			
+			    #header nav ul li {
+			        border-left: 0;
+			        border-top: solid 1px #ffffff;
+			    }
+			
+			    #header nav ul li:first-child {
+			        border-top: 0;
+			    }
+			
+			    #header nav ul li a {
+			        height: 3rem;
+			        line-height: 3rem;
+			        min-width: 0;
+			        width: 100%;
+			        white-space: nowrap; /* Prevent wrapping on mobile */
+			        padding: 0 1.25rem 0 1.45rem; /* Restore original padding */
+			    }
+			}
+			
+			/* Desktop-specific styles */
+			@media (min-width: 481px) {
+			    #header nav ul li a {
+			        height: 3.5rem; /* Adjusted for two lines on desktop */
+			        line-height: 1.2rem; /* Allow multiple lines */
+			        white-space: normal; /* Enable wrapping on desktop */
+			        overflow-wrap: break-word; /* Break words if needed */
+			        padding: 0 1rem; /* Symmetric padding */
+			    }
+			}
 
 		#header nav.use-middle:after {
 			content: '';

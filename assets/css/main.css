@@ -1335,14 +1335,12 @@ input, select, textarea {
 				line-height: 2;
 			}
 
-			/* Base styles for all screens */
+			/* Reset to original base styles */
 			#header nav ul {
 			    display: -moz-flex;
 			    display: -webkit-flex;
 			    display: -ms-flex;
 			    display: flex;
-			    justify-content: center; /* Center the group of items */
-			    align-items: stretch; /* Stretch items to equal height */
 			    margin-bottom: 0;
 			    list-style: none;
 			    padding-left: 0;
@@ -1353,7 +1351,6 @@ input, select, textarea {
 			#header nav ul li {
 			    padding-left: 0;
 			    border-left: solid 1px #ffffff;
-			    flex: 1; /* Distribute equal width to each li */
 			}
 			
 			#header nav ul li:first-child {
@@ -1361,21 +1358,15 @@ input, select, textarea {
 			}
 			
 			#header nav ul li a {
-			    display: flex;
-			    justify-content: center; /* Center text horizontally */
-			    align-items: center; /* Center text vertically */
-			    min-width: 0; /* Allow flex to adjust width */
-			    width: 100%; /* Fill the li */
-			    height: 3.5rem; /* Adjusted for two lines */
-			    line-height: 1.2rem; /* Allow multiple lines */
-			    padding: 0 1rem; /* Symmetric padding */
+			    display: block;
+			    min-width: 7.5rem;
+			    height: 2.75rem;
+			    line-height: 2.75rem;
+			    padding: 0 1.25rem 0 1.45rem;
 			    text-transform: uppercase;
 			    letter-spacing: 0.2rem;
 			    font-size: 0.8rem;
 			    border-bottom: 0;
-			    white-space: normal; /* Enable text wrapping */
-			    overflow-wrap: break-word; /* Break words if needed */
-			    text-align: center; /* Ensure centered text */
 			}
 			
 			#header nav ul li a:hover {
@@ -1386,7 +1377,7 @@ input, select, textarea {
 			    background-color: rgba(255, 255, 255, 0.175);
 			}
 			
-			/* Mobile-specific styles (assuming Dimension template default) */
+			/* Mobile-specific styles (preserve original behavior) */
 			@media (max-width: 480px) {
 			    #header nav ul {
 			        -moz-flex-direction: column;
@@ -1411,19 +1402,41 @@ input, select, textarea {
 			        line-height: 3rem;
 			        min-width: 0;
 			        width: 100%;
-			        white-space: nowrap; /* Prevent wrapping on mobile */
-			        padding: 0 1.25rem 0 1.45rem; /* Restore original padding */
+			        white-space: nowrap;
+			        padding: 0 1.25rem 0 1.45rem;
 			    }
 			}
 			
 			/* Desktop-specific styles */
 			@media (min-width: 481px) {
+			    #header nav ul {
+			        justify-content: center !important; /* Center the group */
+			    }
+			
+			    #header nav ul li {
+			        flex: 1 !important; /* Equal width distribution */
+			    }
+			
 			    #header nav ul li a {
-			        height: 3.5rem; /* Adjusted for two lines on desktop */
-			        line-height: 1.2rem; /* Allow multiple lines */
-			        white-space: normal; /* Enable wrapping on desktop */
-			        overflow-wrap: break-word; /* Break words if needed */
-			        padding: 0 1rem; /* Symmetric padding */
+			        display: flex !important;
+			        justify-content: center !important; /* Center text horizontally */
+			        align-items: center !important; /* Center text vertically */
+			        min-width: 10rem !important; /* ~30% wider than 7.5rem (7.5 * 1.3 ≈ 9.75, rounded to 10rem) */
+			        width: 100% !important;
+			        height: 3.5rem !important; /* Adjusted for two lines */
+			        line-height: 1.2rem !important; /* Allow multiple lines */
+			        padding: 0 1rem !important; /* Symmetric padding */
+			        white-space: normal !important; /* Enable text wrapping */
+			        overflow-wrap: break-word !important; /* Break words if needed */
+			        text-align: center !important; /* Ensure centered text */
+			    }
+			
+			    #header nav ul li a:hover {
+			        background-color: rgba(255, 255, 255, 0.075) !important;
+			    }
+			
+			    #header nav ul li a:active {
+			        background-color: rgba(255, 255, 255, 0.175) !important;
 			    }
 			}
 

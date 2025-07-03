@@ -1359,7 +1359,7 @@ input, select, textarea {
 			
 			#header nav ul li a {
 			    display: block;
-			    min-width: 7.5rem;
+			    min-width: 10.5rem;
 			    height: 2.75rem;
 			    line-height: 2.75rem;
 			    padding: 0 1.25rem 0 1.45rem;
@@ -1380,30 +1380,35 @@ input, select, textarea {
 			/* Mobile-specific styles (preserve original behavior) */
 			@media (max-width: 480px) {
 			    #header nav ul {
-			        -moz-flex-direction: column;
-			        -webkit-flex-direction: column;
-			        -ms-flex-direction: column;
-			        flex-direction: column;
-			        min-width: 10rem;
-			        max-width: 100%;
+			        -moz-flex-direction: column !important;
+			        -webkit-flex-direction: column !important;
+			        -ms-flex-direction: column !important;
+			        flex-direction: column !important;
+			        min-width: 10rem !important;
+			        max-width: 100% !important;
 			    }
 			
 			    #header nav ul li {
-			        border-left: 0;
-			        border-top: solid 1px #ffffff;
+			        border-left: 0 !important;
+			        border-top: solid 1px #ffffff !important;
 			    }
 			
 			    #header nav ul li:first-child {
-			        border-top: 0;
+			        border-top: 0 !important;
 			    }
 			
 			    #header nav ul li a {
-			        height: 3rem;
-			        line-height: 3rem;
-			        min-width: 0;
-			        width: 100%;
-			        white-space: nowrap;
-			        padding: 0 1.25rem 0 1.45rem;
+			        display: block !important; /* Ensure block display */
+			        height: 3rem !important;
+			        line-height: 3rem !important;
+			        min-width: 0 !important;
+			        width: 100% !important;
+			        white-space: nowrap !important; /* Prevent wrapping */
+			        padding: 0 1.25rem 0 1.45rem !important; /* Original padding */
+			        text-transform: uppercase !important;
+			        letter-spacing: 0.2rem !important;
+			        font-size: 0.8rem !important;
+			        border-bottom: 0 !important;
 			    }
 			}
 			

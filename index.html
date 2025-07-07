@@ -19,25 +19,24 @@
                 <!-- Header -->
                     <header id="header">
                         <div class="logo">
-                            <span class="icon fa-gem" aria-label="Automation by Ethan logo"></span>
+                            <span class="icon fa-gem" aria-label="BulwarkUI logo"></span>
                         </div>
                         <div class="content">
                             <div class="inner">
                                 <h1>Bulwark UI</h1>
 				<h2></h2>
-                               <p>UI Automation that Moves Uou Forward<br />
+                               <p>UI Automation that Moves You Forward<br />
 				Enhance your testing capabilities today with a <a href="#contact">free consultation</a></p>
                             </div>
                         </div>
-                        <nav>
-                            <ul>
-                                <li><a href="#intro">What We Offer</a></li>
-                                <li><a href="#work">Why Choose Us</a></li>
-                                <li><a href="#about">Demo</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                                <!-- <li><a href="#elements">Elements</a></li> -->
-                            </ul>
-                        </nav>
+                        <nav role="navigation" aria-label="Main navigation for BulwarkUI">
+			    <ul>
+			        <li><a href="#intro" aria-label="Learn about BulwarkUI's UI automation services">What We Offer</a></li>
+			        <li><a href="#work" aria-label="Reasons to choose BulwarkUI for UI automation">Why Choose Us</a></li>
+			        <li><a href="#about" aria-label="View a demo of BulwarkUI's UI automation">Demo</a></li>
+			        <li><a href="#contact" aria-label="Contact BulwarkUI for UI automation inquiries">Contact</a></li>
+			    </ul>
+			</nav>
                     </header>
 
             <!-- Main -->
@@ -47,7 +46,8 @@
                         <article id="intro">
                             <h2 class="major">What We Offer:
 Comprehensive UI Automation Solutions</h2>
-                            <span class="image main"><img src="images/ui-image-01.jpg" alt="UI automation process illustration" loading="lazy" /></span>
+			<span class="image main"><img src="images/ui-image-01.jpg" alt="BulwarkUI UI automation process illustration" loading="lazy" aria-describedby="intro-desc" /></span>
+			<p id="intro-desc" style="display: none;">Illustration of BulwarkUI's UI automation process using Selenium and Katalon Studio.</p>
                             <p>
                                 <strong>Selenium-Based Automation Suite</strong><br />
                                 Leverage our robust Selenium framework for:<br />
@@ -78,7 +78,8 @@ Comprehensive UI Automation Solutions</h2>
                     <!-- Why Choose Us -->
                         <article id="work">
                             <h2 class="major">Why Choose Us:</h2>
-                            <span class="image main"><img src="images/pic02.jpg" alt="Benefits of UI automation services" loading="lazy" /></span>
+                            <span class="image main"><img src="images/pic02.jpg" alt="Benefits of BulwarkUI's UI automation services" loading="lazy" aria-describedby="work-desc" /></span>
+			    <p id="work-desc" style="display: none;">Visual representation of the benefits of choosing BulwarkUI for UI automation testing.</p>
                             <div class="subtitle"><strong>Elevate Your Testing Efficiency</strong></div>
                             <p>
                                 <strong>Save Resources</strong><br />
@@ -96,7 +97,8 @@ Comprehensive UI Automation Solutions</h2>
                     <!-- Demo -->
                         <article id="about">
                             <h2 class="major">Demo</h2>
-                            <span class="image main"><img src="images/pic03.jpg" alt="Live UI automation demo" loading="lazy" /></span>
+                            <span class="image main"><img src="images/pic03.jpg" alt="BulwarkUI live UI automation demo" loading="lazy" aria-describedby="about-desc" /></span>
+			    <p id="about-desc" style="display: none;">Demo showcasing BulwarkUI's UI automation capabilities with Katalon Studio and Selenium.</p>
                             <p>Explore our UI automation in action with a live demo. See how Katalon Studio and Selenium streamline your testing process.</p>
                             <p>Request a specialized demo through our Contacts page</p>
                             <p>Here is a simple demo that will demonstrate the power of automation</p>								
@@ -106,36 +108,37 @@ Comprehensive UI Automation Solutions</h2>
                     <!-- Contact -->
                         <article id="contact">
                             <h2 class="major">Contact</h2>
-                            <form method="post" action="https://formspree.io/f/xeoknper">
-                            <p>Ready to supercharge your testing? Get in touch with us today!</p>
-                                <div class="fields">
-                                    <div class="field half">
-                                        <label for="name">Name</label>
-                                        <input type="text" name="name" id="name" required  />
-                                    </div>
-                                    <div class="field half">
-                                        <label for="email">Email</label>
-                                        <input type="text" name="email" id="email" required  />
-                                    </div>
-                                    <div class="field">
-                                        <label for="message">Message</label>
-                                        <textarea name="message" id="message" rows="4" required ></textarea>
-                                    </div>
-                                </div>
-                                <ul class="actions">
-                                    <li><input type="submit" value="Send Message" class="primary" /></li>
-                                    <li><input type="reset" value="Reset" /></li>
-                                </ul>
-                                <!-- Formspree hidden fields for spam protection and subject -->
-                                    <input type="hidden" name="_subject" value="New Contact from Automation by Ethan">
-                                    <input type="text" name="_honey" style="display:none" disabled>
-                            </form>
-                            <ul class="icons">
-                                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                                <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                            </ul>
+                            <form method="post" action="https://formspree.io/f/xeoknper" aria-labelledby="contact-form-title">
+			    <h2 id="contact-form-title" class="major">Contact</h2>
+			    <p>Ready to supercharge your testing? Get in touch with BulwarkUI today!</p>
+			    <div class="fields">
+			        <div class="field half">
+			            <label for="name">Name</label>
+			            <input type="text" name="name" id="name" required aria-required="true" />
+			        </div>
+			        <div class="field half">
+			            <label for="email">Email</label>
+			            <input type="text" name="email" id="email" required aria-required="true" />
+			        </div>
+			        <div class="field">
+			            <label for="message">Message</label>
+			            <textarea name="message" id="message" rows="4" required aria-required="true"></textarea>
+			        </div>
+			    </div>
+			    <ul class="actions">
+			        <li><input type="submit" value="Send Message" class="primary" aria-label="Send contact message to BulwarkUI" /></li>
+			        <li><input type="reset" value="Reset" aria-label="Reset BulwarkUI contact form" /></li>
+			    </ul>
+			    <input type="hidden" name="_subject" value="New Contact from BulwarkUI">
+			    <input type="text" name="_honey" style="display:none" disabled>
+			</form>
+                            <!-- Contact Article -->
+			<ul class="icons">
+			    <li><a href="https://twitter.com/BulwarkUI" class="icon brands fa-twitter" aria-label="Follow BulwarkUI on Twitter"><span class="label">Twitter</span></a></li>
+			    <li><a href="https://facebook.com/BulwarkUI" class="icon brands fa-facebook-f" aria-label="Follow BulwarkUI on Facebook"><span class="label">Facebook</span></a></li>
+			    <li><a href="https://instagram.com/BulwarkUI" class="icon brands fa-instagram" aria-label="Follow BulwarkUI on Instagram"><span class="label">Instagram</span></a></li>
+			    <li><a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow BulwarkUI on GitHub"><span class="label">GitHub</span></a></li>
+			</ul>
                         </article>
 
                     <!-- Elements -->
@@ -377,13 +380,15 @@ Comprehensive UI Automation Solutions</h2>
                 </div>
 
             <!-- Footer -->
-                <footer id="footer">
-                    © BulwarkUI. All rights reserved.
-                        <a href="#contact">Contact Us</a> | 
-                        Follow us: 
-                        <a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a>
-                        <a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a>
-                </footer>
+		<footer id="footer">
+		    <p>© BulwarkUI. All rights reserved.</p>
+		    <p>
+		        <a href="#contact" aria-label="Contact BulwarkUI">Contact Us</a> | 
+		        Follow us: 
+		        <a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin" aria-label="Follow BulwarkUI on LinkedIn"><span class="label">LinkedIn</span></a>
+		        <a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow BulwarkUI on GitHub"><span class="label">GitHub</span></a>
+		    </p>
+		</footer>
 		</div>
 		    <!-- HTML5 UP Credit -->
 		    <div id="html5up-credit">

@@ -1414,6 +1414,13 @@ body.is-preload #main article {
     z-index: 1001;
     transition: all 0.2s ease;
     pointer-events: auto;
+    opacity: 0;
+    visibility: hidden;
+}
+
+body.is-article-visible .modal-close {
+    opacity: 1;                   /* ← SHOW ON MODAL */
+    visibility: visible;
 }
 
 .modal-close:hover {
@@ -2198,6 +2205,7 @@ summary::after {
         margin: 0.5rem 0 !important;
     }
 }
+
 
 
 

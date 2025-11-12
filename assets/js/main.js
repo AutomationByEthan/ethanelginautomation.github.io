@@ -90,6 +90,8 @@ $main._show = function(id, initial = false) {
             $footer.hide();
             $main.show();
             $article.show();
+            $body.addClass('is-article-visible');
+            document.body.style.overflow = 'hidden';
             setTimeout(() => {
                 $article.addClass('active');
                 $window.scrollTop(0).trigger('resize.flexbox-fix');
@@ -117,6 +119,8 @@ $main._hide = function(addState = false) {
             $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
         }
         $body.removeClass('is-article-visible');
+        $body.removeClass('is-article-visible');
+        document.body.style.overflow = '';
         locked = false;
         $body.removeClass('is-switching');
         $window.scrollTop(0).trigger('resize.flexbox-fix');
@@ -143,22 +147,38 @@ $main._hide = function(addState = false) {
 };
 
 // Articles: Add Close Buttons and Prevent Click Bubbling
-$main_articles.each(function() {
+$main_articles.each(function () {
     const $this = $(this);
-    $('<span class="close">Close</span>').appendTo($this).on('click', () => {
-        console.log(`Close button clicked for article: ${$this.attr('id')}`); // Debug
-        $main._hide(true);
+
+    // 1. Create fixed close button (uses your .close CSS)
+    const $close = $('<div>', {
+        'class': 'close',
+        'aria-label': 'Close modal',
+        'role': 'button',
+        'tabindex': '0'
+    }).on('click keydown', function (e) {
+        if (e.type === 'click' || (e.type === 'keydown' && (e.key === 'Enter' || e.key === ' '))) {
+            e.preventDefault();
+            $main._hide(true);
+        }
     });
-    $this.on('click', (event) => event.stopPropagation());
+
+    // 2. Insert at the very top of the article
+    $this.prepend($close);
+
+    // 3. Prevent article click from closing (backdrop only)
+    $this.on('click', (e) => e.stopPropagation());
 });
 
 // Events: Body Click and Keyup
-$body.on('click', () => {
-    if ($body.hasClass('is-article-visible')) $main._hide(true);
+$body.on('click', function (e) {
+    if ($body.hasClass('is-article-visible') && !$(e.target).closest('#main article').length) {
+        $main._hide(true);
+    }
 });
 
-$window.on('keyup', (event) => {
-    if (event.keyCode === 27 && $body.hasClass('is-article-visible')) {
+$window.on('keyup', (e) => {
+    if (e.key === 'Escape' && $body.hasClass('is-article-visible')) {
         $main._hide(true);
     }
 });
@@ -232,4 +252,5 @@ $main_articles.hide();
 if (location.hash !== '' && location.hash !== '#') {
     $window.on('load', () => $main._show(location.hash.substr(1), true));
 }})(jQuery);
+
 

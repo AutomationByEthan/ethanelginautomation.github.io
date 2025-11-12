@@ -1450,6 +1450,62 @@ body.is-preload #main article {
     }
 }
 
+/* --- FIXED CLOSE BUTTON (ALWAYS VISIBLE) --- */
+#main article {
+    position: relative;               /* Needed for absolute children */
+    padding-top: 5rem;                /* Space for fixed close button */
+    padding-right: 5rem;              /* Prevent content under button */
+    max-height: 85vh;                 /* Optional: limit height + enable scroll */
+    overflow-y: auto;                 /* Enable scrolling */
+}
+
+#main article .close {
+    position: fixed !important;       /* Stays in viewport */
+    top: 2rem;                        /* Distance from top of viewport */
+    right: 2rem;                      /* Distance from right */
+    z-index: 1000;                    /* Above everything */
+    width: 3.5rem;                    /* Slightly smaller */
+    height: 3.5rem;
+    background: rgba(27, 31, 34, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+#main article .close:hover {
+    background: rgba(0, 191, 255, 0.2);
+    transform: scale(1.1);
+}
+
+#main article .close:before {
+    top: 0.875rem;
+    left: 0.875rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-size: 18px 18px;
+}
+
+/* Mobile: smaller button, closer to edge */
+@media screen and (max-width: 736px) {
+    #main article {
+        padding-top: 4.5rem;
+        padding-right: 4.5rem;
+    }
+    #main article .close {
+        top: 1.5rem;
+        right: 1.5rem;
+        width: 3rem;
+        height: 3rem;
+    }
+    #main article .close:before {
+        top: 0.75rem;
+        left: 0.75rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-size: 16px 16px;
+    }
+}
+
 /* Footer */
 #footer {
     transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
@@ -2196,3 +2252,4 @@ summary::after {
         margin: 0.5rem 0 !important;
     }
 }
+

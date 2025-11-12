@@ -85,6 +85,7 @@ $main._show = function(id, initial = false) {
         }, delay);
     } else {
         $body.addClass('is-article-visible');
+        document.body.style.overflow = 'hidden';
         setTimeout(() => {
             $header.hide();
             $footer.hide();
@@ -117,6 +118,7 @@ $main._hide = function(addState = false) {
         if (breakpoints.active('<=medium')) {
             $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
         }
+        document.body.style.overflow = '';
         $body.removeClass('is-article-visible');
         document.body.style.overflow = '';
         locked = false;
@@ -148,28 +150,29 @@ $main._hide = function(addState = false) {
 $main_articles.each(function () {
     const $this = $(this);
 
-    // 1. Create fixed close button
+    // Remove any existing close button
+    locked = false;
+    $('.modal-close').remove();
+
+    // Create sticky close button (attached to BODY)
     const $close = $('<div>', {
-        'class': 'close',
+        'class': 'modal-close',
         'aria-label': 'Close modal',
         'role': 'button',
         'tabindex': '0'
     }).on('click keydown', function (e) {
-        // Click OR Enter/Space
         if (e.type === 'click' || (e.type === 'keydown' && (e.key === 'Enter' || e.key === ' '))) {
             e.preventDefault();
-            e.stopPropagation();           // Prevent backdrop click
+            e.stopPropagation();
             $main._hide(true);
         }
     });
 
-    // 2. Insert at the very top (before any content)
-    $this.prepend($close);
+    // Append to BODY (not article) → fixes fixed positioning
+    $('body').append($close);
 
-    // 3. Stop article clicks from bubbling to body (backdrop only)
-    $this.on('click', function (e) {
-        e.stopPropagation();
-    });
+    // Prevent article click from closing (backdrop only)
+    $this.on('click', e => e.stopPropagation());
 });
 // Events: Body Click and Keyup
 $body.on('click', function (e) {
@@ -253,6 +256,7 @@ $main_articles.hide();
 if (location.hash !== '' && location.hash !== '#') {
     $window.on('load', () => $main._show(location.hash.substr(1), true));
 }})(jQuery);
+
 
 
 

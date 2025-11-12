@@ -1382,11 +1382,10 @@ body.is-preload #main article {
     position: fixed;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     width: 40rem;
     max-width: 90vw;
     max-height: 85vh;
-    margin-top: -20rem;        /* Half of height (40rem / 2) */
-    margin-left: -20rem;       /* Half of width */
     padding: 5rem 5rem 2rem 2rem;
     overflow-y: auto;
     background-color: rgba(27, 31, 34, 0.85);
@@ -1402,8 +1401,7 @@ body.is-preload #main article {
     visibility: visible;
 }
 
-/* ---- FIXED CLOSE BUTTON (ALWAYS VISIBLE) ---- */
-#main article .close {
+.modal-close {
     position: fixed !important;
     top: 2rem;
     right: 2rem;
@@ -1418,47 +1416,34 @@ body.is-preload #main article {
     pointer-events: auto;
 }
 
-#main article .close:hover {
+.modal-close:hover {
     background: rgba(0, 191, 255, 0.2);
     transform: scale(1.1);
 }
 
-#main article .close:before {
+.modal-close:before {
     content: '';
     position: absolute;
     top: 0.875rem;
     left: 0.875rem;
     width: 1.75rem;
     height: 1.75rem;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cline x1='2' y1='2' x2='18' y2='18' stroke='%23fff' stroke-width='1'/%3E%3Cline x1='18' y1='2' x2='2' y2='18' stroke='%23fff' stroke-width='1'/%3E%3C/svg%3E");
     background-size: 18px 18px;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 100%;
-    transition: background-color 0.2s ease-in-out;
 }
 
-#main article .close:hover:before {
-    background-color: rgba(255, 255, 255, 0.075);
-}
-
-#main article .close:active:before {
-    background-color: rgba(255, 255, 255, 0.175);
-}
-
-/* Mobile: smaller button, closer to edge */
+/* Mobile */
 @media screen and (max-width: 736px) {
-    #main article {
-        padding-top: 4.5rem;
-        padding-right: 4.5rem;
-    }
-    #main article .close {
+    .modal-close {
         top: 1.5rem;
         right: 1.5rem;
         width: 3rem;
         height: 3rem;
     }
-    #main article .close:before {
+    .modal-close:before {
         top: 0.75rem;
         left: 0.75rem;
         width: 1.5rem;
@@ -2213,6 +2198,7 @@ summary::after {
         margin: 0.5rem 0 !important;
     }
 }
+
 
 
 

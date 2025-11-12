@@ -1394,6 +1394,19 @@ body.is-preload #main article {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.325s ease-in-out;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+#main article::-webkit-scrollbar {
+    width: 0 !important;
+    background: transparent;
+}
+
+#main article.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 #main article.active {
@@ -2215,6 +2228,7 @@ summary::after {
         margin: 0.5rem 0 !important;
     }
 }
+
 
 
 

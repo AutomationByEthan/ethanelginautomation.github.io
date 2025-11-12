@@ -148,26 +148,29 @@ $main._hide = function(addState = false) {
 $main_articles.each(function () {
     const $this = $(this);
 
-    // 1. Create fixed close button (uses your .close CSS)
+    // 1. Create fixed close button
     const $close = $('<div>', {
         'class': 'close',
         'aria-label': 'Close modal',
         'role': 'button',
         'tabindex': '0'
     }).on('click keydown', function (e) {
+        // Click OR Enter/Space
         if (e.type === 'click' || (e.type === 'keydown' && (e.key === 'Enter' || e.key === ' '))) {
             e.preventDefault();
+            e.stopPropagation();           // Prevent backdrop click
             $main._hide(true);
         }
     });
 
-    // 2. Insert at the very top of the article
+    // 2. Insert at the very top (before any content)
     $this.prepend($close);
 
-    // 3. Prevent article click from closing (backdrop only)
-    $this.on('click', (e) => e.stopPropagation());
+    // 3. Stop article clicks from bubbling to body (backdrop only)
+    $this.on('click', function (e) {
+        e.stopPropagation();
+    });
 });
-
 // Events: Body Click and Keyup
 $body.on('click', function (e) {
     if ($body.hasClass('is-article-visible') && !$(e.target).closest('#main article').length) {
@@ -250,6 +253,7 @@ $main_articles.hide();
 if (location.hash !== '' && location.hash !== '#') {
     $window.on('load', () => $main._show(location.hash.substr(1), true));
 }})(jQuery);
+
 
 
 

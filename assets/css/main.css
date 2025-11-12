@@ -1377,6 +1377,7 @@ body.is-preload #main article {
     opacity: 0;
 }
 
+/* ---- MODAL (ARTICLE) ---- */
 #main article {
     position: fixed;
     top: 50%;
@@ -1385,16 +1386,20 @@ body.is-preload #main article {
     width: 40rem;
     max-width: 90vw;
     max-height: 85vh;
-    padding: 5rem 5rem 2rem 2rem;
+    padding: 5rem 5rem 2rem 2rem;   /* Space for fixed X */
     overflow-y: auto;
     background-color: rgba(27, 31, 34, 0.85);
     border-radius: 4px;
     z-index: 1000;
+    opacity: 0;                    /* Start hidden */
+    visibility: hidden;
+    transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
 }
 
 #main article.active {
-    transform: translateY(0);
     opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) translateY(0); /* Ensures no offset */
 }
 
 /* ---- FIXED CLOSE BUTTON (ALWAYS VISIBLE) ---- */
@@ -2207,5 +2212,6 @@ summary::after {
         margin: 0.5rem 0 !important;
     }
 }
+
 
 

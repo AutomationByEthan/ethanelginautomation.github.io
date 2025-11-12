@@ -1416,6 +1416,8 @@ body.is-preload #main article {
     pointer-events: auto;
     opacity: 0;
     visibility: hidden;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body.is-article-visible .modal-close {
@@ -1449,6 +1451,9 @@ body.is-article-visible .modal-close {
         right: 1.5rem;
         width: 3rem;
         height: 3rem;
+        cursor: pointer;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
     }
     .modal-close:before {
         top: 0.75rem;
@@ -1456,6 +1461,11 @@ body.is-article-visible .modal-close {
         width: 1.5rem;
         height: 1.5rem;
         background-size: 16px 16px;
+    }
+
+    .modal-close:active {
+        transform: scale(0.95);
+        background: rgba(0, 191, 255, 0.3);
     }
 }
 
@@ -2205,6 +2215,7 @@ summary::after {
         margin: 0.5rem 0 !important;
     }
 }
+
 
 
 

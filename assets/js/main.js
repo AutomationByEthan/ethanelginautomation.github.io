@@ -90,7 +90,6 @@ $main._show = function(id, initial = false) {
             $footer.hide();
             $main.show();
             $article.show();
-            $body.addClass('is-article-visible');
             document.body.style.overflow = 'hidden';
             setTimeout(() => {
                 $article.addClass('active');
@@ -252,5 +251,6 @@ $main_articles.hide();
 if (location.hash !== '' && location.hash !== '#') {
     $window.on('load', () => $main._show(location.hash.substr(1), true));
 }})(jQuery);
+
 
 

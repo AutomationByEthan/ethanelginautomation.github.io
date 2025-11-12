@@ -1378,15 +1378,18 @@ body.is-preload #main article {
 }
 
 #main article {
-    transform: translateY(0.25rem);
-    transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
-    padding: 4.5rem 2.5rem 1.5rem;
-    position: relative;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 40rem;
-    max-width: 100%;
+    max-width: 90vw;
+    max-height: 85vh;
+    padding: 5rem 5rem 2rem 2rem;
+    overflow-y: auto;
     background-color: rgba(27, 31, 34, 0.85);
     border-radius: 4px;
-    opacity: 0;
+    z-index: 1000;
 }
 
 #main article.active {
@@ -1394,81 +1397,18 @@ body.is-preload #main article {
     opacity: 1;
 }
 
+/* ---- FIXED CLOSE BUTTON (ALWAYS VISIBLE) ---- */
 #main article .close {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 4rem;
-    height: 4rem;
-    cursor: pointer;
-    text-indent: 4rem;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-#main article .close:before {
-    transition: background-color 0.2s ease-in-out;
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0.75rem;
-    left: 0.75rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 100%;
-    background-position: center;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-}
-
-#main article .close:hover:before {
-    background-color: rgba(255, 255, 255, 0.075);
-}
-
-#main article .close:active:before {
-    background-color: rgba(255, 255, 255, 0.175);
-}
-
-@media screen and (max-width: 736px) {
-    #main article {
-        padding: 3.5rem 2rem 0.5rem;
-    }
-    #main article .close:before {
-        top: 0.875rem;
-        left: 0.875rem;
-        width: 2.25rem;
-        height: 2.25rem;
-        background-size: 14px 14px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #main article {
-        padding: 3rem 1.5rem 0.5rem;
-    }
-}
-
-/* --- FIXED CLOSE BUTTON (ALWAYS VISIBLE) --- */
-#main article {
-    position: relative;               /* Needed for absolute children */
-    padding-top: 5rem;                /* Space for fixed close button */
-    padding-right: 5rem;              /* Prevent content under button */
-    max-height: 85vh;                 /* Optional: limit height + enable scroll */
-    overflow-y: auto;                 /* Enable scrolling */
-}
-
-#main article .close {
-    position: fixed !important;       /* Stays in viewport */
-    top: 2rem;                        /* Distance from top of viewport */
-    right: 2rem;                      /* Distance from right */
-    z-index: 1000;                    /* Above everything */
-    width: 3.5rem;                    /* Slightly smaller */
+    position: fixed !important;
+    top: 2rem;
+    right: 2rem;
+    width: 3.5rem;
     height: 3.5rem;
     background: rgba(27, 31, 34, 0.9);
     border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 1001;
     transition: all 0.2s ease;
 }
 
@@ -1478,11 +1418,26 @@ body.is-preload #main article {
 }
 
 #main article .close:before {
+    content: '';
+    position: absolute;
     top: 0.875rem;
     left: 0.875rem;
     width: 1.75rem;
     height: 1.75rem;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
     background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100%;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#main article .close:hover:before {
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+#main article .close:active:before {
+    background-color: rgba(255, 255, 255, 0.175);
 }
 
 /* Mobile: smaller button, closer to edge */
@@ -2252,4 +2207,5 @@ summary::after {
         margin: 0.5rem 0 !important;
     }
 }
+
 

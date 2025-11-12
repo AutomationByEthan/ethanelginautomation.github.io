@@ -1415,6 +1415,7 @@ body.is-preload #main article {
     cursor: pointer;
     z-index: 1001;
     transition: all 0.2s ease;
+    pointer-events: auto;
 }
 
 #main article .close:hover {
@@ -2212,6 +2213,7 @@ summary::after {
         margin: 0.5rem 0 !important;
     }
 }
+
 
 
 

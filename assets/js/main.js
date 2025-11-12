@@ -118,7 +118,6 @@ $main._hide = function(addState = false) {
             $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
         }
         $body.removeClass('is-article-visible');
-        $body.removeClass('is-article-visible');
         document.body.style.overflow = '';
         locked = false;
         $body.removeClass('is-switching');
@@ -251,6 +250,7 @@ $main_articles.hide();
 if (location.hash !== '' && location.hash !== '#') {
     $window.on('load', () => $main._show(location.hash.substr(1), true));
 }})(jQuery);
+
 
 
 

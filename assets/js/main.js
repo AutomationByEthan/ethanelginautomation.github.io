@@ -257,7 +257,35 @@ if (location.hash !== '' && location.hash !== '#') {
     $window.on('load', () => $main._show(location.hash.substr(1), true));
 }})(jQuery);
 
+<script>
+// Auto-inject section title into modal header
+document.addEventListener('DOMContentLoaded', function () {
+    const template = document.getElementById('modal-header-template').content;
+    const articles = document.querySelectorAll('#main > article');
 
+    articles.forEach(article => {
+        const placeholder = article.querySelector('.modal-header-placeholder');
+        if (!placeholder) return;
+
+        const clone = template.cloneNode(true);
+        const titleEl = clone.querySelector('.modal-title');
+        const closeBtn = clone.querySelector('.close-modal');
+
+        // Get title from nav or fallback
+        const navLink = document.querySelector(`nav a[href="#${article.id}"]`);
+        const title = navLink ? navLink.textContent : article.id.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+
+        titleEl.textContent = title;
+
+        // Close behavior (reuse your existing close logic)
+        closeBtn.addEventListener('click', () => {
+            article.querySelector('.close').click(); // Triggers your existing close
+        });
+
+        placeholder.appendChild(clone);
+    });
+});
+</script>
 
 
 

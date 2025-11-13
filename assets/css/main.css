@@ -1,5 +1,33 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
+/* ── LIGHT THEME ─────────────────────────────────────── */
+:root {
+  --bg: #f8f9fc;               /* page background */
+  --panel: #ffffff;            /* cards / articles */
+  --text: #2d3748;             /* main copy */
+  --text-secondary: #4a5568;   /* muted */
+  --primary: #5a67d8;          /* accent / buttons */
+  --border: rgba(0,0,0,0.08);
+}
+
+/* Override the dark background that comes from #bg */
+#bg { background: var(--bg); }
+
+/* Article panels */
+#wrapper > #main > article { background: var(--panel); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+
+/* Text */
+.inner, .inner-content p, .inner-content li { color: var(--text); }
+.inner-content p { line-height: 1.7; }
+
+/* Buttons – keep your primary style but lighter */
+.button.primary { background: var(--primary); }
+.button.primary:hover { background: #4349c7; }
+
+/* Links */
+a { color: var(--primary); }
+a:hover { color: #4349c7; }
+
 /* Reset */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
@@ -2239,3 +2267,73 @@ summary::after {
 #main article {
     scroll-behavior: smooth;
 }
+
+/* ── LIGHT-MODE FINAL OVERRIDES (place at the very bottom) ── */
+html.light,
+body.light,
+.light #wrapper > #main > article,
+.light .inner,
+.light .inner-content,
+.light .feature,
+.light .video-card,
+.light .testimonial-card,
+.light .pricing-card,
+.light .services-hero,
+.light .testimonials-hero,
+.light .timeline .step,
+.light .testimonial-mini,
+.light .case-study summary,
+.light .case-study .case-content,
+.light .sample-card p,
+.light .badge,
+.light .tag,
+.light .modal-close,
+.light .modal-close:before,
+.light .button,
+.light .button.primary,
+.light a,
+.light h1, .light h2, .light h3, .light h4,
+.light p, .light blockquote, .light cite,
+.light code, .light pre {
+    /* Force light colors */
+    color: var(--text) !important;
+    background-color: var(--panel) !important;
+    border-color: var(--border) !important;
+}
+
+/* Primary accent */
+.light .button.primary,
+.light .button.primary:hover,
+.light .badge,
+.light .tag {
+    background-color: var(--primary) !important;
+    color: #fff !important;
+}
+
+/* Links */
+.light a { color: var(--primary) !important; }
+.light a:hover { color: #4349c7 !important; }
+
+/* Headers */
+.light h1, .light h2, .light h3 { color: var(--text) !important; }
+
+/* Specific dark leftovers */
+.light .feature,
+.light .video-card,
+.light .testimonial-card,
+.light .pricing-card,
+.light .services-hero,
+.light .testimonials-hero,
+.light .timeline .step,
+.light .testimonial-mini,
+.light .case-study summary,
+.light .case-study .case-content {
+    background: var(--panel) !important;
+    border-color: var(--border) !important;
+}
+
+/* Remove dark overlay on images */
+.light .image:before { display: none !important; }
+
+/* Footer */
+.light #footer .copyright { color: var(--text-secondary) !important; }

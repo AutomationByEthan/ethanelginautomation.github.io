@@ -146,34 +146,6 @@ $main._hide = function(addState = false) {
     }, delay);
 };
 
-// Articles: Add Close Buttons and Prevent Click Bubbling
-$main_articles.each(function () {
-    const $this = $(this);
-
-    // Remove any existing close button
-    locked = false;
-    $('.modal-close').remove();
-
-    // Create sticky close button (attached to BODY)
-    const $close = $('<div>', {
-        'class': 'modal-close',
-        'aria-label': 'Close modal',
-        'role': 'button',
-        'tabindex': '0'
-    }).on('click keydown', function (e) {
-        if (e.type === 'click' || (e.type === 'keydown' && (e.key === 'Enter' || e.key === ' '))) {
-            e.preventDefault();
-            e.stopPropagation();
-            $main._hide(true);
-        }
-    });
-
-    // Append to BODY (not article) → fixes fixed positioning
-    $('body').append($close);
-
-    // Prevent article click from closing (backdrop only)
-    $this.on('click', e => e.stopPropagation());
-});
 // Events: Body Click and Keyup
 $body.on('click', function (e) {
     if ($body.hasClass('is-article-visible') && !$(e.target).closest('#main article').length) {
@@ -258,35 +230,38 @@ if (location.hash !== '' && location.hash !== '#') {
 }})(jQuery);
 
 <script>
-// Auto-inject section title into modal header
+// Auto-inject modal header + unified close
 document.addEventListener('DOMContentLoaded', function () {
-    const template = document.getElementById('modal-header-template').content;
-    const articles = document.querySelectorAll('#main > article');
+    const template = document.getElementById('modal-header-template');
+    if (!template) {
+        console.error('Modal header template not found!');
+        return;
+    }
 
+    const articles = document.querySelectorAll('#main > article');
     articles.forEach(article => {
         const placeholder = article.querySelector('.modal-header-placeholder');
         if (!placeholder) return;
 
-        const clone = template.cloneNode(true);
+        const clone = template.content.cloneNode(true);
         const titleEl = clone.querySelector('.modal-title');
         const closeBtn = clone.querySelector('.close-modal');
 
-        // Get title from nav or fallback
+        // Get title from nav
         const navLink = document.querySelector(`nav a[href="#${article.id}"]`);
-        const title = navLink ? navLink.textContent : article.id.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        const title = navLink ? navLink.textContent.trim() : 
+                      article.id.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 
         titleEl.textContent = title;
 
-        // Close behavior (reuse your existing close logic)
+        // Close using jQuery _hide() directly
         closeBtn.addEventListener('click', () => {
-            article.querySelector('.close').click(); // Triggers your existing close
+            if (window.$main && typeof $main._hide === 'function') {
+                $main._hide(true);
+            }
         });
 
         placeholder.appendChild(clone);
     });
 });
 </script>
-
-
-
-

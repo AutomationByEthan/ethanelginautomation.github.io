@@ -75,19 +75,9 @@
 
         <!-- Main -->
         <div id="main">
-            <!-- MODAL HEADER TEMPLATE (hidden, cloned by JS) -->
-                <template id="modal-header-template">
-                    <div class="modal-header">
-                        <h3 class="modal-title"></h3>
-                        <button type="button" class="close-modal" aria-label="Close this section">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                </template>
             <!-- Services -->
-            <article id="services" class="style1" role="region" aria-labelledby="services-title">                
-                <div class="modal-header-placeholder"></div>
-                <div class="close" aria-label="Close modal"></div>
+            <article id="services" class="style1" role="region" aria-labelledby="services-title">
+                <div class="close">Close</div>
             
                 <!-- H1 for SEO (hidden visually) -->
                 <h1 id="services-title" class="visually-hidden">Kyperian Automation Services</h1>
@@ -169,8 +159,7 @@
 
             <!-- Portfolio -->
             <article id="portfolio" class="style1" role="region" aria-labelledby="portfolio-title">
-                <div class="modal-header-placeholder"></div>
-                <div class="close" aria-label="Close modal"></div>                
+                <div class="close">Close</div>
                 <h2 id="portfolio-title" class="major">Watch Automation in Action</h2>
                 <p class="subtitle">60-second demos — no setup, real Selenium & Katalon scripts running live.</p>
             
@@ -297,9 +286,8 @@ public void loginAndValidate() throws Exception {
 
             <!-- Testimonials -->
             <article id="testimonials" class="style1" role="region" aria-labelledby="testimonials-title">
-                <div class="modal-header-placeholder"></div>
-                <div class="close" aria-label="Close modal"></div>
-                            
+                <div class="close">Close</div>
+            
                 <!-- SEO H1 -->
                 <h1 id="testimonials-title" class="visually-hidden">Client Testimonials – Kyperian Automation</h1>
             
@@ -364,9 +352,9 @@ public void loginAndValidate() throws Exception {
             
                 <!-- TRUST BADGES -->
                 <div class="trust-badges">
-                    <img src="images/badge-federal.svg" alt="Trusted by Federal Agencies" />
-                    <img src="images/badge-18months.svg" alt="18+ Months Stability" />
-                    <img src="images/badge-moneyback.svg" alt="30-Day Money-Back Guarantee" />
+                    <img src="images/badge-federal.png" alt="Trusted by Federal Agencies" loading="lazy" />
+                    <img src="images/badge-18months.png" alt="18+ Months Stability" loading="lazy" />
+                    <img src="images/badge-moneyback.png" alt="30-Day Money-Back Guarantee" loading="lazy" />
                 </div>
             
                 <!-- FINAL CTA -->
@@ -380,119 +368,38 @@ public void loginAndValidate() throws Exception {
             </article>
 
             <!-- About Us -->
-                <article id="about-us" class="style1" role="region" aria-labelledby="about-title">
-                    <div class="modal-header-placeholder"></div>
-                    <div class="close" aria-label="Close modal"></div>
+                <article id="about-us" role="region" aria-labelledby="about-title">
+                    <div class="close">Close</div>
+                    <h2 id="about-title" class="major">We Build UI Automation That Never Breaks</h2>
                 
-                    <!-- SEO H1 (hidden) -->
-                    <h1 id="about-title" class="visually-hidden">About Ethan Elgin – Kyperian Automation</h1>
-                
-                    <!-- HERO -->
-                    <div class="about-hero">
-                        <h2 class="major">Meet the Engineer Behind the Automation</h2>
-                        <p class="metric">12+ years • 100+ scripts • 20% manual effort cut • USDA & Federal trusted</p>
+                    <!-- Block 1: Hook + Proof -->
+                    <div class="about-block">
+                        <h3>90% Faster QA. Zero Flakes.</h3>
+                        <p>Selenium <em>or</em> Katalon Studio. One client cut regression time by <strong>80% in 6 weeks</strong>.</p>
                     </div>
                 
-                    <!-- BIO CONTENT -->
-                    <div class="inner-content">
+                    <!-- Block 2: Who I Am — Human First -->
+                    <div class="about-block personal">
+                        <h3>Hi, I’m Ethan</h3>
                         <p>
-                            I’m <strong>Ethan Elgin</strong>, Senior QA Automation Engineer. At the USDA I authored
-                            <strong>100+ Groovy/Selenium</strong> scripts that reduced manual regression effort by
-                            <strong>20%</strong> across 50+ bi-weekly releases—running automatically in Jenkins and GitHub Actions.
-                        </p>
-                
-                        <p>
-                            Over the last <strong>12 years</strong> I’ve shipped production software to 15 states,
-                            trained <strong>20+ QA engineers</strong> on Jira, Maven CLI, and pure-Java frameworks,
-                            and mentored <strong>500+ end-users</strong> during live go-lives.
-                        </p>
-                
-                        <p>
-                            Today I run <strong>Kyperian Automation</strong>—your practical, code-first resource for
-                            bulletproof UI testing. You get:
-                        </p>
-                
-                        <div class="features-grid">
-                            <div class="feature">
-                                <i class="fas fa-code" aria-hidden="true"></i>
-                                <h3>Open-Source Scripts</h3>
-                                <p>Live on GitHub – clone, run, adapt</p>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-video" aria-hidden="true"></i>
-                                <h3>YouTube Tutorials</h3>
-                                <p>From Katalon → pure Selenium in 4 videos</p>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-book" aria-hidden="true"></i>
-                                <h3>Migration Playbooks</h3>
-                                <p>Battle-tested Katalon → WebDriver/Playwright</p>
-                            </div>
-                        </div>
-                
-                        <p class="font-semibold text-center mt-8">
-                            My stack:
-                            <span class="inline-flex flex-wrap gap-2 justify-center mt-2">
-                                <span class="tag">Java</span>
-                                <span class="tag">Groovy</span>
-                                <span class="tag">Selenium</span>
-                                <span class="tag">Playwright</span>
-                                <span class="tag">REST-assured</span>
-                                <span class="tag">Jenkins</span>
-                                <span class="tag">AWS</span>
-                                <span class="tag">SQL</span>
-                            </span>
+                            I’m the 35-year-old dad in NW Missouri who writes flawless scripts at 7 a.m. while my 4 kids sleep.<br>
+                            One line of code → 10,000 perfect runs before my first cup of coffee.<br>
+                            <strong>That’s my infinite lever.</strong>
                         </p>
                     </div>
                 
-                    <!-- CTAs -->
-                    <div class="cta-wrapper">
-                        <a href="https://github.com/AutomationByEthan/sample-script" target="_blank" rel="noopener"
-                           class="button primary"
-                           onclick="gtag('event', 'github_click', { 'event_category': 'Engagement', 'event_label': 'About GitHub CTA' });">
-                            View Sample Script on GitHub
-                        </a>
-                        <a href="https://www.youtube.com/@KyperianAutomation" target="_blank" rel="noopener"
-                           class="button"
-                           onclick="gtag('event', 'youtube_click', { 'event_category': 'Engagement', 'event_label': 'About YouTube CTA' });">
-                            Watch Tutorial Series
+                    <!-- Block 3: CTA -->
+                    <div class="about-block cta">
+                        <a href="#contact" class="button primary" 
+                           onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Schedule Demo Button - About' });">
+                           Book 15-min Demo
                         </a>
                     </div>
-                
-                    <!-- JSON-LD Person Schema -->
-                    <script type="application/ld+json">
-                    {
-                      "@context": "https://schema.org",
-                      "@type": "Person",
-                      "name": "Ethan Elgin",
-                      "jobTitle": "Senior QA Automation Engineer",
-                      "url": "https://www.kyperianautomation.com",
-                      "sameAs": [
-                        "https://www.linkedin.com/in/elginethan",
-                        "https://github.com/AutomationByEthan/sample-script",
-                        "https://www.youtube.com/@KyperianAutomation"
-                      ],
-                      "alumniOf": {
-                        "@type": "CollegeOrUniversity",
-                        "name": "Northwest Missouri State University"
-                      },
-                      "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Smithville",
-                        "addressRegion": "MO",
-                        "postalCode": "64089",
-                        "addressCountry": "US"
-                      },
-                      "email": "elgin.ethan@gmail.com",
-                      "telephone": "(816) 738-4053"
-                    }
-                    </script>
                 </article>
         
             <!-- Contact -->
             <article id="contact" role="region" aria-labelledby="contact-title">
-                <div class="modal-header-placeholder"></div>
-                <div class="close" aria-label="Close modal"></div>                
+                <div class="close">Close</div>
                 <h2 id="contact-title" class="major">Contact</h2>
                 <p>Ready to streamline your testing with robust automation and clear reporting? Contact us to schedule a demo or request a sample Katalon Studio script showcasing our clean coding and stable designs!</p>
                 <form method="post" action="https://formspree.io/f/xeoknper" aria-labelledby="contact-title" onsubmit="gtag('event', 'form_submission', { 'event_category': 'Contact', 'event_label': 'Contact Form' });">
@@ -558,38 +465,5 @@ public void loginAndValidate() throws Exception {
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <!-- MODAL HEADER INJECTION -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const template = document.getElementById('modal-header-template');
-    if (!template) {
-        console.error('Modal header template not found!');
-        return;
-    }
-
-    document.querySelectorAll('#main > article').forEach(article => {
-        const placeholder = article.querySelector('.modal-header-placeholder');
-        if (!placeholder) return;
-
-        const clone = template.content.cloneNode(true);
-        const titleEl = clone.querySelector('.modal-title');
-        const closeBtn = clone.querySelector('.close-modal');
-
-        const navLink = document.querySelector(`nav a[href="#${article.id}"]`);
-        titleEl.textContent = navLink ? navLink.textContent.trim() : 
-                              article.id.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-
-        closeBtn.addEventListener('click', () => {
-            if (window.$main && typeof $main._hide === 'function') {
-                $main._hide(true);
-            }
-        });
-
-        placeholder.appendChild(clone);
-    });
-});
-</script>
-    
 </body>
 </html>

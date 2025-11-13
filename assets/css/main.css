@@ -1394,6 +1394,14 @@ body.is-preload #main article {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.325s ease-in-out;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+#main article::-webkit-scrollbar {
+    width: 0 !important;
+    background: transparent;
 }
 
 #main article.active {
@@ -2214,4 +2222,20 @@ summary::after {
         width: 100% !important;
         margin: 0.5rem 0 !important;
     }
+}
+
+/* ---- HIDE SCROLLBAR, KEEP SCROLL ---- */
+#main article::-webkit-scrollbar {
+    width: 0 !important;
+    background: transparent;
+}
+
+#main article {
+    -ms-overflow-style: none;  /* IE + Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+/* Optional: smooth scrolling */
+#main article {
+    scroll-behavior: smooth;
 }

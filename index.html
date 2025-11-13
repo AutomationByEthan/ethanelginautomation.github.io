@@ -374,79 +374,102 @@ public void loginAndValidate() throws Exception {
                     <!-- SEO H1 (hidden) -->
                     <h1 id="about-title" class="visually-hidden">About Ethan Elgin – Kyperian Automation</h1>
                 
-                    <!-- HERO -->
-                    <div class="about-hero">
-                        <h2 class="major">Meet the Engineer Behind the Automation</h2>
-                        <p class="metric">12+ years • 100+ scripts • 20% manual effort cut • USDA & Federal trusted</p>
-                    </div>
-                
-                    <!-- BIO CONTENT -->
-                    <div class="inner-content">
-                        <p>
-                            I’m <strong>Ethan Elgin</strong>, Senior QA Automation Engineer. At the USDA I authored
-                            <strong>100+ Groovy/Selenium</strong> scripts that reduced manual regression effort by
-                            <strong>20%</strong> across 50+ bi-weekly releases—running automatically in Jenkins and GitHub Actions.
+                    <!-- HERO – clean, centered -->
+                    <section class="about-hero" style="text-align:center; padding:3rem 1rem;">
+                        <h2 style="font-size:2.4rem; margin-bottom:.5rem;">Meet Ethan Elgin</h2>
+                        <p class="metric" style="font-size:1.15rem; color:var(--text-secondary);">
+                            12+ years • 100+ scripts • 20% manual effort cut • USDA & Federal trusted
                         </p>
+                    </section>
                 
-                        <p>
-                            Over the last <strong>12 years</strong> I’ve shipped production software to 15 states,
-                            trained <strong>20+ QA engineers</strong> on Jira, Maven CLI, and pure-Java frameworks,
-                            and mentored <strong>500+ end-users</strong> during live go-lives.
-                        </p>
+                    <!-- BIO CARD -->
+                    <div class="inner-content" style="max-width:800px; margin:0 auto; padding:0 1.5rem;">
+                        <div class="bio-card" style="
+                            background:var(--panel);
+                            border-radius:12px;
+                            padding:2rem;
+                            box-shadow:0 4px 16px rgba(0,0,0,0.06);
+                            margin-bottom:2rem;
+                        ">
+                            <p style="margin:0 0 1rem;">
+                                I’m <strong>Ethan Elgin</strong>, Senior QA Automation Engineer. At the USDA I authored
+                                <strong>100+ Groovy/Selenium</strong> scripts that reduced manual regression effort by
+                                <strong>20%</strong> across 50+ bi-weekly releases—running automatically in Jenkins and GitHub Actions.
+                            </p>
+                            <p style="margin:0 0 1rem;">
+                                Over the last <strong>12 years</strong> I’ve shipped production software to 15 states,
+                                trained <strong>20+ QA engineers</strong> on Jira, Maven CLI, and pure-Java frameworks,
+                                and mentored <strong>500+ end-users</strong> during live go-lives.
+                            </p>
+                            <p style="margin:0;">
+                                Today I run <strong>Kyperian Automation</strong>—your practical, code-first resource for bulletproof UI testing.
+                            </p>
+                        </div>
                 
-                        <p>
-                            Today I run <strong>Kyperian Automation</strong>—your practical, code-first resource for
-                            bulletproof UI testing. You get:
-                        </p>
-                
-                        <div class="features-grid">
-                            <div class="feature">
-                                <i class="fas fa-code" aria-hidden="true"></i>
-                                <h3>Open-Source Scripts</h3>
-                                <p>Live on GitHub – clone, run, adapt</p>
+                        <!-- FEATURES GRID – same style as Portfolio -->
+                        <h3 style="text-align:center; margin:2.5rem 0 1.5rem; font-size:1.4rem;">What You Get</h3>
+                        <div class="features-grid" style="
+                            display:grid;
+                            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+                            gap:1.5rem;
+                            margin-bottom:2rem;
+                        ">
+                            <div class="feature" style="text-align:center;">
+                                <i class="fas fa-code" style="font-size:2rem; color:var(--primary);"></i>
+                                <h4 style="margin:.6rem 0 .3rem; font-size:1.1rem;">Open-Source Scripts</h4>
+                                <p style="font-size:.9rem; color:var(--text-secondary);">Live on GitHub – clone, run, adapt</p>
                             </div>
-                            <div class="feature">
-                                <i class="fas fa-video" aria-hidden="true"></i>
-                                <h3>YouTube Tutorials</h3>
-                                <p>From Katalon → pure Selenium in 4 videos</p>
+                            <div class="feature" style="text-align:center;">
+                                <i class="fas fa-video" style="font-size:2rem; color:var(--primary);"></i>
+                                <h4 style="margin:.6rem 0 .3rem; font-size:1.1rem;">YouTube Tutorials</h4>
+                                <p style="font-size:.9rem; color:var(--text-secondary);">From Katalon → pure Selenium in 4 videos</p>
                             </div>
-                            <div class="feature">
-                                <i class="fas fa-book" aria-hidden="true"></i>
-                                <h3>Migration Playbooks</h3>
-                                <p>Battle-tested Katalon → WebDriver/Playwright</p>
+                            <div class="feature" style="text-align:center;">
+                                <i class="fas fa-book" style="font-size:2rem; color:var(--primary);"></i>
+                                <h4 style="margin:.6rem 0 .3rem; font-size:1.1rem;">Migration Playbooks</h4>
+                                <p style="font-size:.9rem; color:var(--text-secondary);">Battle-tested Katalon → WebDriver/Playwright</p>
                             </div>
                         </div>
                 
-                        <p class="font-semibold text-center mt-8">
+                        <!-- TECH STACK TAGS -->
+                        <p style="text-align:center; margin:2rem 0 1rem; font-weight:600;">
                             My stack:
-                            <span class="inline-flex flex-wrap gap-2 justify-center mt-2">
-                                <span class="tag">Java</span>
-                                <span class="tag">Groovy</span>
-                                <span class="tag">Selenium</span>
-                                <span class="tag">Playwright</span>
-                                <span class="tag">REST-assured</span>
-                                <span class="tag">Jenkins</span>
-                                <span class="tag">AWS</span>
-                                <span class="tag">SQL</span>
-                            </span>
                         </p>
+                        <div style="display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; margin-bottom:2.5rem;">
+                            <span class="tag" style="
+                                background:var(--primary);
+                                color:#fff;
+                                padding:.35rem .75rem;
+                                border-radius:6px;
+                                font-size:.85rem;
+                            ">Java</span>
+                            <span class="tag" style="background:var(--primary);color:#fff;padding:.35rem .75rem;border-radius:6px;font-size:.85rem;">Groovy</span>
+                            <span class="tag" style="background:var(--primary);color:#fff;padding:.35rem .75rem;border-radius:6px;font-size:.85rem;">Selenium</span>
+                            <span class="tag" style="background:var(--primary);color:#fff;padding:.35rem .75rem;border-radius:6px;font-size:.85rem;">Playwright</span>
+                            <span class="tag" style="background:var(--primary);color:#fff;padding:.35rem .75rem;border-radius:6px;font-size:.85rem;">REST-assured</span>
+                            <span class="tag" style="background:var(--primary);color:#fff;padding:.35rem .75rem;border-radius:6px;font-size:.85rem;">Jenkins</span>
+                            <span class="tag" style="background:var(--primary);color:#fff;padding:.35rem .75rem;border-radius:6px;font-size:.85rem;">AWS</span>
+                            <span class="tag" style="background:var(--primary);color:#fff;padding:.35rem .75rem;border-radius:6px;font-size:.85rem;">SQL</span>
+                        </div>
+                
+                        <!-- CTA BUTTONS – side-by-side -->
+                        <div class="cta-wrapper" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                            <a href="https://github.com/AutomationByEthan/sample-script"
+                               target="_blank" rel="noopener"
+                               class="button primary"
+                               onclick="gtag('event','github_click',{event_category:'Engagement',event_label:'About GitHub CTA'});">
+                               View Sample Script
+                            </a>
+                            <a href="https://www.youtube.com/@KyperianAutomation"
+                               target="_blank" rel="noopener"
+                               class="button"
+                               onclick="gtag('event','youtube_click',{event_category:'Engagement',event_label:'About YouTube CTA'});">
+                               Watch Tutorials
+                            </a>
+                        </div>
                     </div>
                 
-                    <!-- CTAs -->
-                    <div class="cta-wrapper">
-                        <a href="https://github.com/AutomationByEthan/sample-script" target="_blank" rel="noopener"
-                           class="button primary"
-                           onclick="gtag('event', 'github_click', { 'event_category': 'Engagement', 'event_label': 'About GitHub CTA' });">
-                            View Sample Script on GitHub
-                        </a>
-                        <a href="https://www.youtube.com/@KyperianAutomation" target="_blank" rel="noopener"
-                           class="button"
-                           onclick="gtag('event', 'youtube_click', { 'event_category': 'Engagement', 'event_label': 'About YouTube CTA' });">
-                            Watch Tutorial Series
-                        </a>
-                    </div>
-                
-                    <!-- JSON-LD Person Schema -->
+                    <!-- JSON-LD (unchanged) -->
                     <script type="application/ld+json">
                     {
                       "@context": "https://schema.org",
@@ -546,6 +569,7 @@ public void loginAndValidate() throws Exception {
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
 
 

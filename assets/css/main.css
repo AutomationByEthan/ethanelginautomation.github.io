@@ -2258,51 +2258,79 @@ summary::after {
     font-size: 1.1rem;
 }
 
-/* PROFILE CARD */
+/* PROFILE CARD — UNIFIED: MOBILE & DESKTOP (Centered Icon + Text) */
 .profile-card {
-    display: flex;
-    gap: 1.5rem;
-    margin: 2rem 0;
-    padding: 1.5rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 1rem;
+    padding: 2rem 1.5rem !important;
     background: rgba(255,255,255,0.03);
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.1);
+    max-width: 800px;
+    margin: 2rem auto;
 }
 
 .profile-image {
-    flex: 0 0 120px;
+    margin: 0 0 1rem 0 !important;
+    flex: none !important;
 }
 
 .avatar-placeholder {
-    width: 120px;
-    height: 120px;
-    background: #00bfff;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    box-shadow: 0 4px 12px rgba(0,191,255,0.2);
+    width: 120px !important;
+    height: 120px !important;
+    background: #00bfff !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 2.6rem !important;
+    box-shadow: 0 6px 16px rgba(0,191,255,0.3) !important;
+    transition: transform 0.2s ease;
+}
+
+.avatar-placeholder:hover {
+    transform: scale(1.05);
+}
+
+.profile-content {
+    width: 100%;
 }
 
 .profile-content h3 {
-    margin: 0 0 0.25rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem !important;
+    margin: 0.5rem 0 0.25rem 0 !important;
     color: #ffffff;
 }
 
 .profile-content .role {
+    font-size: 1rem !important;
     color: #00d1b2;
     font-weight: 600;
     margin-bottom: 1rem;
-    font-size: 0.95rem;
 }
 
 .profile-content p {
-    margin: 0.75rem 0;
-    line-height: 1.6;
+    font-size: 1rem !important;
+    line-height: 1.7;
     color: #b0b0b0;
+    margin: 0.75rem 0;
+}
+
+/* Mobile tweak: Slightly smaller on tiny screens */
+@media (max-width: 480px) {
+    .avatar-placeholder {
+        width: 100px !important;
+        height: 100px !important;
+        font-size: 2.2rem !important;
+    }
+    .profile-content h3 {
+        font-size: 1.35rem !important;
+    }
 }
 
 /* EXPERTISE GRID */
@@ -2401,59 +2429,4 @@ summary::after {
     width: 100%; height: 4px;
     background: #00bfff;
     box-shadow: 0 0 12px rgba(0,191,255,.6);
-}
-
-/* MOBILE: CENTER AVATAR AT TOP — PERFECTLY CENTERED */
-@media (max-width: 736px) {
-    .profile-card {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        padding: 1.5rem 1rem !important;
-        gap: 1rem;
-    }
-
-    .profile-image {
-        margin: 0 0 1rem 0 !important;
-        flex: none !important;
-    }
-
-    .avatar-placeholder {
-        width: 100px !important;
-        height: 100px !important;
-        font-size: 2.2rem !important;
-        background: #00bfff !important;
-        color: white !important;
-        border-radius: 50% !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        box-shadow: 0 4px 12px rgba(0,191,255,0.3) !important;
-    }
-
-    .profile-content {
-        width: 100%;
-    }
-
-    .profile-content h3 {
-        font-size: 1.35rem !important;
-        margin: 0.5rem 0 0.25rem 0 !important;
-    }
-
-    .profile-content .role {
-        font-size: 0.95rem !important;
-        margin-bottom: 0.75rem !important;
-    }
-}
-
-/* Optional: Smaller logo on tiny screens */
-@media (max-width: 480px) {
-    #header .logo {
-        width: 3.8rem !important;
-        height: 3.8rem !important;
-        line-height: 3.8rem !important;
-    }
-    #header .logo .icon:before {
-        font-size: 3.6rem !important;
-    }
 }

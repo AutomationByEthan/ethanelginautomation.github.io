@@ -2403,31 +2403,38 @@ summary::after {
     box-shadow: 0 0 12px rgba(0,191,255,.6);
 }
 
-/* MOBILE – CENTER LOGO + RESPONSIVE HEADER */
+/* MOBILE – LOGO PERFECTLY CENTERED */
 @media (max-width: 736px) {
-    /* ---- LOGO CENTER ---- */
     #header {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
+        padding: 0 1rem;
     }
+
     #header .logo {
         margin: 0 auto !important;
         position: relative;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0 !important;
+        transform: none !important;
+        display: block;
     }
 
-    /* ---- SUB-PAGE HEADER RESPONSIVE ---- */
-    .subpage-header {
-        margin: -2rem -2rem 1.5rem -2rem;
-        padding: 1.2rem 1rem 1.8rem;
+    #header .logo .icon:before {
+        font-size: 4.5rem;
     }
-    .subpage-header h2 { font-size: 1.8rem; }
 
-    /* ---- ABOUT-US SPECIFIC (keep your old tweaks) ---- */
-    .profile-card { flex-direction: column; text-align: center; }
-    .profile-image { margin: 0 auto; }
-    .expertise-grid { grid-template-columns: 1fr; }
+    /* Optional: Adjust size on very small screens */
+    @media (max-width: 480px) {
+        #header .logo {
+            width: 4rem;
+            height: 4rem;
+            line-height: 4rem;
+        }
+        #header .logo .icon:before {
+            font-size: 4rem;
+        }
+    }
 }

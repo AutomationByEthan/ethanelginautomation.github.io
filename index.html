@@ -371,82 +371,89 @@ public void loginAndValidate() throws Exception {
                 <article id="about-us" class="style1" role="region" aria-labelledby="about-title">
                     <div class="close" aria-label="Close modal"></div>
                 
+                    <!-- PORTFOLIO-STYLE HEADER -->
+                    <header class="about-header">
+                        <h3>About Us</h3>
+                        <button type="button" class="close-modal" aria-label="Close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </header>
+                
                     <!-- SEO H1 (hidden) -->
                     <h1 id="about-title" class="visually-hidden">About Ethan Elgin – Kyperian Automation</h1>
                 
-                    <!-- HERO -->
-                    <div class="about-hero">
-                        <h2 class="major">Meet the Engineer Behind the Automation</h2>
+                    <!-- HERO SECTION -->
+                    <section class="about-hero">
+                        <h2>Meet the Engineer Behind the Automation</h2>
                         <p class="metric">12+ years • 100+ scripts • 20% manual effort cut • USDA & Federal trusted</p>
-                    </div>
+                    </section>
                 
-                    <!-- BIO CONTENT -->
-                    <div class="inner-content">
-                        <p>
-                            I’m <strong>Ethan Elgin</strong>, Senior QA Automation Engineer. At the USDA I authored
-                            <strong>100+ Groovy/Selenium</strong> scripts that reduced manual regression effort by
-                            <strong>20%</strong> across 50+ bi-weekly releases—running automatically in Jenkins and GitHub Actions.
-                        </p>
-                
-                        <p>
-                            Over the last <strong>12 years</strong> I’ve shipped production software to 15 states,
-                            trained <strong>20+ QA engineers</strong> on Jira, Maven CLI, and pure-Java frameworks,
-                            and mentored <strong>500+ end-users</strong> during live go-lives.
-                        </p>
-                
-                        <p>
-                            Today I run <strong>Kyperian Automation</strong>—your practical, code-first resource for
-                            bulletproof UI testing. You get:
-                        </p>
-                
-                        <div class="features-grid">
-                            <div class="feature">
-                                <i class="fas fa-code" aria-hidden="true"></i>
-                                <h3>Open-Source Scripts</h3>
-                                <p>Live on GitHub – clone, run, adapt</p>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-video" aria-hidden="true"></i>
-                                <h3>YouTube Tutorials</h3>
-                                <p>From Katalon → pure Selenium in 4 videos</p>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-book" aria-hidden="true"></i>
-                                <h3>Migration Playbooks</h3>
-                                <p>Battle-tested Katalon → WebDriver/Playwright</p>
+                    <!-- PROFILE CARD -->
+                    <section class="profile-card">
+                        <div class="profile-image">
+                            <div class="avatar-placeholder">
+                                <i class="fas fa-user-tie"></i>
                             </div>
                         </div>
+                        <div class="profile-content">
+                            <h3>Ethan Elgin</h3>
+                            <p class="role">Senior QA Automation Engineer</p>
+                            <p>
+                                At the USDA, I authored <strong>100+ Groovy/Selenium</strong> scripts that reduced manual regression effort by <strong>20%</strong> across 50+ bi-weekly releases — running automatically in Jenkins and GitHub Actions.
+                            </p>
+                            <p>
+                                Over the last <strong>12 years</strong>, I’ve shipped production software to 15 states, trained <strong>20+ QA engineers</strong> on Java, Maven, and CI/CD, and mentored <strong>500+ end-users</strong> during live go-lives.
+                            </p>
+                        </div>
+                    </section>
                 
-                        <p class="font-semibold text-center mt-8">
-                            My stack:
-                            <span class="inline-flex flex-wrap gap-2 justify-center mt-2">
-                                <span class="tag">Java</span>
-                                <span class="tag">Groovy</span>
-                                <span class="tag">Selenium</span>
-                                <span class="tag">Playwright</span>
-                                <span class="tag">REST-assured</span>
-                                <span class="tag">Jenkins</span>
-                                <span class="tag">AWS</span>
-                                <span class="tag">SQL</span>
-                            </span>
-                        </p>
-                    </div>
+                    <!-- EXPERTISE GRID -->
+                    <section class="expertise-grid">
+                        <div class="expertise-item">
+                            <i class="fas fa-code"></i>
+                            <h4>Open-Source Scripts</h4>
+                            <p>Live on GitHub — clone, run, adapt</p>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-video"></i>
+                            <h4>YouTube Tutorials</h4>
+                            <p>From Katalon to pure Selenium in 4 videos</p>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-book"></i>
+                            <h4>Migration Playbooks</h4>
+                            <p>Katalon to WebDriver/Playwright</p>
+                        </div>
+                    </section>
                 
-                    <!-- CTAs -->
+                    <!-- TECH STACK -->
+                    <section class="tech-stack">
+                        <h4>My Stack</h4>
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Groovy</span>
+                            <span class="tag">Selenium</span>
+                            <span class="tag">Playwright</span>
+                            <span class="tag">REST-assured</span>
+                            <span class="tag">Jenkins</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </section>
+                
+                    <!-- CTA -->
                     <div class="cta-wrapper">
                         <a href="https://github.com/AutomationByEthan/sample-script" target="_blank" rel="noopener"
-                           class="button primary"
-                           onclick="gtag('event', 'github_click', { 'event_category': 'Engagement', 'event_label': 'About GitHub CTA' });">
-                            View Sample Script on GitHub
+                           class="button primary" onclick="gtag('event', 'github_click', { 'event_category': 'Engagement', 'event_label': 'About GitHub CTA' });">
+                            View Sample Script
                         </a>
                         <a href="https://www.youtube.com/@KyperianAutomation" target="_blank" rel="noopener"
-                           class="button"
-                           onclick="gtag('event', 'youtube_click', { 'event_category': 'Engagement', 'event_label': 'About YouTube CTA' });">
-                            Watch Tutorial Series
+                           class="button" onclick="gtag('event', 'youtube_click', { 'event_category': 'Engagement', 'event_label': 'About YouTube CTA' });">
+                            Watch Tutorials
                         </a>
                     </div>
                 
-                    <!-- JSON-LD Person Schema -->
+                    <!-- JSON-LD -->
                     <script type="application/ld+json">
                     {
                       "@context": "https://schema.org",
@@ -459,10 +466,7 @@ public void loginAndValidate() throws Exception {
                         "https://github.com/AutomationByEthan/sample-script",
                         "https://www.youtube.com/@KyperianAutomation"
                       ],
-                      "alumniOf": {
-                        "@type": "CollegeOrUniversity",
-                        "name": "Northwest Missouri State University"
-                      },
+                      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Northwest Missouri State University" },
                       "address": {
                         "@type": "PostalAddress",
                         "addressLocality": "Smithville",
@@ -546,3 +550,4 @@ public void loginAndValidate() throws Exception {
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+

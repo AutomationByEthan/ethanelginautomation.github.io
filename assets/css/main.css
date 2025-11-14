@@ -2403,28 +2403,36 @@ summary::after {
     box-shadow: 0 0 12px rgba(0,191,255,.6);
 }
 
-/* MOBILE – LOGO PERFECTLY CENTERED */
+/* MOBILE: CENTER AVATAR AT TOP (Like Before) */
 @media (max-width: 736px) {
-    #header {
-        display: flex;
+    .profile-card {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         text-align: center;
-        padding: 0 1rem;
+        padding: 1.5rem 1rem;
     }
 
-    #header .logo {
-        margin: 0 auto !important;
-        position: relative;
-        left: 0 !important;
-        transform: none !important;
-        display: block;
+    .profile-image {
+        margin: 0 0 1.2rem 0 !important;
+        flex: none;
     }
 
-    #header .logo .icon:before {
-        font-size: 4.5rem;
+    .avatar-placeholder {
+        width: 110px;
+        height: 110px;
+        font-size: 2.3rem;
+        box-shadow: 0 4px 12px rgba(0,191,255,0.3);
     }
+
+    .profile-content h3 {
+        font-size: 1.35rem;
+        margin-top: 0;
+    }
+
+    .profile-content .role {
+        font-size: 0.95rem;
+    }
+}
 
     /* Optional: Adjust size on very small screens */
     @media (max-width: 480px) {
@@ -2437,4 +2445,3 @@ summary::after {
             font-size: 4rem;
         }
     }
-}

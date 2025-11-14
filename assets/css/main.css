@@ -2403,45 +2403,57 @@ summary::after {
     box-shadow: 0 0 12px rgba(0,191,255,.6);
 }
 
-/* MOBILE: CENTER AVATAR AT TOP (Like Before) */
+/* MOBILE: CENTER AVATAR AT TOP — PERFECTLY CENTERED */
 @media (max-width: 736px) {
     .profile-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 1.5rem 1rem;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 1.5rem 1rem !important;
+        gap: 1rem;
     }
 
     .profile-image {
-        margin: 0 0 1.2rem 0 !important;
-        flex: none;
+        margin: 0 0 1rem 0 !important;
+        flex: none !important;
     }
 
     .avatar-placeholder {
-        width: 110px;
-        height: 110px;
-        font-size: 2.3rem;
-        box-shadow: 0 4px 12px rgba(0,191,255,0.3);
+        width: 100px !important;
+        height: 100px !important;
+        font-size: 2.2rem !important;
+        background: #00bfff !important;
+        color: white !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 4px 12px rgba(0,191,255,0.3) !important;
+    }
+
+    .profile-content {
+        width: 100%;
     }
 
     .profile-content h3 {
-        font-size: 1.35rem;
-        margin-top: 0;
+        font-size: 1.35rem !important;
+        margin: 0.5rem 0 0.25rem 0 !important;
     }
 
     .profile-content .role {
-        font-size: 0.95rem;
+        font-size: 0.95rem !important;
+        margin-bottom: 0.75rem !important;
     }
 }
 
-    /* Optional: Adjust size on very small screens */
-    @media (max-width: 480px) {
-        #header .logo {
-            width: 4rem;
-            height: 4rem;
-            line-height: 4rem;
-        }
-        #header .logo .icon:before {
-            font-size: 4rem;
-        }
+/* Optional: Smaller logo on tiny screens */
+@media (max-width: 480px) {
+    #header .logo {
+        width: 3.8rem !important;
+        height: 3.8rem !important;
+        line-height: 3.8rem !important;
     }
+    #header .logo .icon:before {
+        font-size: 3.6rem !important;
+    }
+}

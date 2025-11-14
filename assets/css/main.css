@@ -2236,25 +2236,9 @@ summary::after {
 }
 
 /* Optional: smooth scrolling */
+
 #main article {
     scroll-behavior: smooth;
-}
-
-.about-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   : center;
-    padding: 1.4rem 1.8rem;
-    background: linear-gradient(135deg, #1b1f22 0%, #15181b 100%);
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 1.4rem;
-    letter-spacing: 0.8px;
-    border-radius: 12px 12px 0 0;
-    margin: -2.5rem -2.5rem 2rem -2.5rem;
-    border-bottom: 2px solid #00bfff;
-    box-shadow: 0 4px 16px rgba(0, 191, 255, 0.15);
 }
 
 .about-hero {
@@ -2447,5 +2431,3 @@ summary::after {
     .profile-image { margin: 0 auto; }
     .expertise-grid { grid-template-columns: 1fr; }
 }
-
-

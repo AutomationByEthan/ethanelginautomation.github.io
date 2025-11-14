@@ -2239,3 +2239,70 @@ summary::after {
 #main article {
     scroll-behavior: smooth;
 }
+
+/* DEFAULT MODAL HEADER (Keep for Services, Portfolio, etc.) */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.6rem;
+    background: #1b1f22;
+    color: #e0e0e0;
+    font-weight: 600;
+    font-size: 1.3rem;
+    border-radius: 8px 8px 0 0;
+    margin: -2rem -2rem 2rem -2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ABOUT US SPECIAL HEADER — MATCHES PORTFOLIO */
+.modal-header.special {
+    padding: 1.4rem 1.8rem;
+    background: linear-gradient(135deg, #1b1f22 0%, #15181b 100%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.8px;
+    border-radius: 12px 12px 0 0;
+    margin: -2.5rem -2.5rem 2rem -2.5rem;
+    border-bottom: 2px solid #00bfff;
+    box-shadow: 0 4px 16px rgba(0, 191, 255, 0.15);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.modal-header.special .modal-title {
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.modal-header.special .close-modal {
+    background: rgba(0, 191, 255, 0.15);
+    color: #00ccff;
+    width: 2.6rem;
+    height: 2.6rem;
+    font-size: 1.2rem;
+    border: 1px solid rgba(0, 191, 255, 0.3);
+}
+
+.modal-header.special .close-modal:hover {
+    background: rgba(0, 191, 255, 0.3);
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 0 16px rgba(0, 191, 255, 0.4);
+}
+
+/* Mobile */
+@media (max-width: 736px) {
+    .modal-header.special {
+        padding: 1rem 1.4rem;
+        margin: -2rem -2rem 1.5rem -2rem;
+        font-size: 1.25rem;
+        border-radius: 10px 10px 0 0;
+    }
+    .modal-header.special .close-modal {
+        width: 2.3rem;
+        height: 2.3rem;
+        font-size: 1.1rem;
+    }
+}

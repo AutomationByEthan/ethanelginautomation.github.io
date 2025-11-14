@@ -2240,4 +2240,194 @@ summary::after {
     scroll-behavior: smooth;
 }
 
+.about-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   : center;
+    padding: 1.4rem 1.8rem;
+    background: linear-gradient(135deg, #1b1f22 0%, #15181b 100%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.8px;
+    border-radius: 12px 12px 0 0;
+    margin: -2.5rem -2.5rem 2rem -2.5rem;
+    border-bottom: 2px solid #00bfff;
+    box-shadow: 0 4px 16px rgba(0, 191, 255, 0.15);
+}
+
+.about-header .close-modal {
+    background: rgba(0, 191, 255, 0.15);
+    border: 1px solid rgba(0, 191, 255, 0.3);
+    color: #00ccff;
+    width: 2.6rem;
+    height: 2.6rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.about-header .close-modal:hover {
+    background: rgba(0, 191, 255, 0.3);
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 16px rgba(0, 191, 255, 0.4);
+}
+
+.about-hero {
+    text-align: center;
+    margin: 0 0 2.5rem;
+}
+
+.about-hero h2 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem;
+    color: #e0e0e0;
+}
+
+.about-hero .metric {
+    color: #00d1b2;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* PROFILE CARD */
+.profile-card {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.profile-image {
+    flex: 0 0 120px;
+}
+
+.avatar-placeholder {
+    width: 120px;
+    height: 120px;
+    background: #00bfff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0,191,255,0.2);
+}
+
+.profile-content h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.profile-content .role {
+    color: #00d1b2;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.profile-content p {
+    margin: 0.75rem 0;
+    line-height: 1.6;
+    color: #b0b0b0;
+}
+
+/* EXPERTISE GRID */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+    margin: 2.5rem 0;
+}
+
+.expertise-item {
+    text-align: center;
+    padding: 1.2rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.2s;
+}
+
+.expertise-item:hover {
+    transform: translateY(-4px);
+    border-color: #00bfff;
+}
+
+.expertise-item i {
+    font-size: 2rem;
+    color: #00bfff;
+    margin-bottom: 0.5rem;
+}
+
+.expertise-item h4 {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+.expertise-item p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin: 0;
+}
+
+/* TECH STACK */
+.tech-stack {
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+.tech-stack h4 {
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+    font-size: 1.1rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.tag {
+    background: rgba(0, 191, 255, 0.15);
+    color: #00ccff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 191, 255, 0.3);
+}
+
+/* MOBILE */
+@media (max-width: 736px) {
+    .about-header {
+        padding: 1rem 1.4rem;
+        margin: -2rem -2rem 1.5rem -2rem;
+        font-size: 1.25rem;
+    }
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-image {
+        margin: 0 auto;
+    }
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+}
 

@@ -2390,23 +2390,62 @@ summary::after {
     border: 1px solid rgba(0, 191, 255, 0.3);
 }
 
-/* MOBILE */
+/* -------------------------------------------------
+   1. BLUE-BAR HEADER – SHARED BY ALL SUB-PAGES
+   ------------------------------------------------- */
+.subpage-header {
+    position: relative;
+    text-align: center;
+    margin: -2.5rem -2.5rem 2rem -2.5rem;
+    padding: 1.5rem 1rem 2rem;
+    background: #1b1f22;
+    border-bottom: 4px solid #00bfff;
+    z-index: 10;
+}
+.subpage-header h2 {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: .8px;
+    text-shadow: 0 2px 4px rgba(0,0,0,.3);
+    margin: 0;
+}
+.subpage-header::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -4px;
+    width: 100%; height: 4px;
+    background: #00bfff;
+    box-shadow: 0 0 12px rgba(0,191,255,.6);
+}
+
+/* MOBILE – CENTER LOGO + RESPONSIVE HEADER */
 @media (max-width: 736px) {
-    .about-header {
-        padding: 1rem 1.4rem;
-        margin: -2rem -2rem 1.5rem -2rem;
-        font-size: 1.25rem;
-    }
-    .profile-card {
+    /* ---- LOGO CENTER ---- */
+    #header {
+        display: flex;
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
-    .profile-image {
-        margin: 0 auto;
+    #header .logo {
+        margin: 0 auto !important;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    .expertise-grid {
-        grid-template-columns: 1fr;
+
+    /* ---- SUB-PAGE HEADER RESPONSIVE ---- */
+    .subpage-header {
+        margin: -2rem -2rem 1.5rem -2rem;
+        padding: 1.2rem 1rem 1.8rem;
     }
+    .subpage-header h2 { font-size: 1.8rem; }
+
+    /* ---- ABOUT-US SPECIFIC (keep your old tweaks) ---- */
+    .profile-card { flex-direction: column; text-align: center; }
+    .profile-image { margin: 0 auto; }
+    .expertise-grid { grid-template-columns: 1fr; }
 }
 
 

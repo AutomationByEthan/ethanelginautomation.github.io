@@ -2496,3 +2496,44 @@ body.is-subpage #header .logo {
     width: 4.5rem;
     height: 4.5rem;
 }
+
+/* ==================================================================
+   REAL SUBPAGES FIX – WORKS ON about/index.html, portfolio/index.html, etc.
+   ================================================================== */
+
+/* 1. Add the subpage class automatically via CSS (no JS needed) */
+body:not(#home) {
+    --is-subpage: 1;
+}
+
+/* 2. Hide the giant homepage hero + nav text */
+body:not(#home) #header .content,
+body:not(#home) #header nav {
+    display: none !important;
+}
+
+/* 3. Turn header into thin top bar with logo */
+body:not(#home) #header {
+    height: 90px !important;
+    background: rgba(27,31,34,0.97) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding: 0 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+body:not(#home) #header .logo {
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 4.5rem !important;
+    height: 4.5rem !important;
+}
+
+/* 4. Show your original close button on real subpages */
+body:not(#home) #wrapper .close,
+body:not(#home) .modal-close {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: all !important;
+}

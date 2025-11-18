@@ -75,6 +75,117 @@
 
         <!-- Main -->
         <div id="main">
+
+            <!-- About Us -->
+                <article id="about-us" class="style1" role="region" aria-labelledby="about-title">
+                    <div class="close" aria-label="Close modal"></div>
+                
+                    <!-- PORTFOLIO-STYLE HEADER -->
+                    <header class="subpage-header">
+                        <h2>About Us</h2>
+                    </header>
+                
+                    <!-- SEO H1 (hidden) -->
+                    <h1 id="about-title" class="visually-hidden">About Ethan Elgin – Kyperian Automation</h1>
+                
+                    <!-- HERO SECTION -->
+                    <section class="about-hero">
+                        <h2>Meet the Engineer Behind the Automation</h2>
+                        <p class="metric">12+ years • 100+ scripts • 20% manual effort cut • USDA & Federal trusted</p>
+                    </section>
+                
+                    <!-- PROFILE CARD -->
+                    <section class="profile-card">
+                        <div class="profile-image">
+                            <div class="avatar-placeholder">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                        </div>
+                        <div class="profile-content">
+                            <h3>Ethan Elgin</h3>
+                            <p class="role">Senior QA Automation Engineer</p>
+                            <p>
+                                At the USDA, I authored <strong>100+ Groovy/Selenium</strong> scripts that reduced manual regression effort by <strong>20%</strong> across 50+ bi-weekly releases — running automatically in Jenkins and GitHub Actions.
+                            </p>
+                            <p>
+                                Over the last <strong>12 years</strong>, I’ve shipped production software to 15 states, trained <strong>20+ QA engineers</strong> on Java, Maven, and CI/CD, and mentored <strong>500+ end-users</strong> during live go-lives.
+                            </p>
+                        </div>
+                    </section>
+                
+                    <!-- EXPERTISE GRID -->
+                    <section class="expertise-grid">
+                        <div class="expertise-item">
+                            <i class="fas fa-code"></i>
+                            <h4>Open-Source Scripts</h4>
+                            <p>Live on GitHub — clone, run, adapt</p>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-video"></i>
+                            <h4>YouTube Tutorials</h4>
+                            <p>From Katalon to pure Selenium in 4 videos</p>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-book"></i>
+                            <h4>Migration Playbooks</h4>
+                            <p>Katalon to WebDriver/Playwright</p>
+                        </div>
+                    </section>
+                
+                    <!-- TECH STACK -->
+                    <section class="tech-stack">
+                        <h4>My Stack</h4>
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Groovy</span>
+                            <span class="tag">Selenium</span>
+                            <span class="tag">Playwright</span>
+                            <span class="tag">REST-assured</span>
+                            <span class="tag">Jenkins</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </section>
+                
+                    <!-- CTA -->
+                    <div class="cta-wrapper">
+                        <a href="https://github.com/AutomationByEthan/sample-script" target="_blank" rel="noopener"
+                           class="button primary" onclick="gtag('event', 'github_click', { 'event_category': 'Engagement', 'event_label': 'About GitHub CTA' });">
+                            View Sample Script
+                        </a>
+                        <a href="https://www.youtube.com/@KyperianAutomation" target="_blank" rel="noopener"
+                           class="button" onclick="gtag('event', 'youtube_click', { 'event_category': 'Engagement', 'event_label': 'About YouTube CTA' });">
+                            Watch Tutorials
+                        </a>
+                    </div>
+                
+                    <!-- JSON-LD -->
+                    <script type="application/ld+json">
+                    {
+                      "@context": "https://schema.org",
+                      "@type": "Person",
+                      "name": "Ethan Elgin",
+                      "jobTitle": "Senior QA Automation Engineer",
+                      "url": "https://www.kyperianautomation.com",
+                      "sameAs": [
+                        "https://www.linkedin.com/in/elginethan",
+                        "https://github.com/AutomationByEthan/sample-script",
+                        "https://www.youtube.com/@KyperianAutomation"
+                      ],
+                      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Northwest Missouri State University" },
+                      "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Smithville",
+                        "addressRegion": "MO",
+                        "postalCode": "64089",
+                        "addressCountry": "US"
+                      },
+                      "email": "elgin.ethan@gmail.com",
+                      "telephone": "(816) 738-4053"
+                    }
+                    </script>
+                </article>
+            
             <!-- Services -->
             <article id="services" class="style1" role="region" aria-labelledby="services-title">
                 <div class="close" aria-label="Close modal"></div>
@@ -380,116 +491,6 @@ public void loginAndValidate() throws Exception {
                     </a>
                 </div>
             </article>
-
-            <!-- About Us -->
-                <article id="about-us" class="style1" role="region" aria-labelledby="about-title">
-                    <div class="close" aria-label="Close modal"></div>
-                
-                    <!-- PORTFOLIO-STYLE HEADER -->
-                    <header class="subpage-header">
-                        <h2>About Us</h2>
-                    </header>
-                
-                    <!-- SEO H1 (hidden) -->
-                    <h1 id="about-title" class="visually-hidden">About Ethan Elgin – Kyperian Automation</h1>
-                
-                    <!-- HERO SECTION -->
-                    <section class="about-hero">
-                        <h2>Meet the Engineer Behind the Automation</h2>
-                        <p class="metric">12+ years • 100+ scripts • 20% manual effort cut • USDA & Federal trusted</p>
-                    </section>
-                
-                    <!-- PROFILE CARD -->
-                    <section class="profile-card">
-                        <div class="profile-image">
-                            <div class="avatar-placeholder">
-                                <i class="fas fa-user-tie"></i>
-                            </div>
-                        </div>
-                        <div class="profile-content">
-                            <h3>Ethan Elgin</h3>
-                            <p class="role">Senior QA Automation Engineer</p>
-                            <p>
-                                At the USDA, I authored <strong>100+ Groovy/Selenium</strong> scripts that reduced manual regression effort by <strong>20%</strong> across 50+ bi-weekly releases — running automatically in Jenkins and GitHub Actions.
-                            </p>
-                            <p>
-                                Over the last <strong>12 years</strong>, I’ve shipped production software to 15 states, trained <strong>20+ QA engineers</strong> on Java, Maven, and CI/CD, and mentored <strong>500+ end-users</strong> during live go-lives.
-                            </p>
-                        </div>
-                    </section>
-                
-                    <!-- EXPERTISE GRID -->
-                    <section class="expertise-grid">
-                        <div class="expertise-item">
-                            <i class="fas fa-code"></i>
-                            <h4>Open-Source Scripts</h4>
-                            <p>Live on GitHub — clone, run, adapt</p>
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-video"></i>
-                            <h4>YouTube Tutorials</h4>
-                            <p>From Katalon to pure Selenium in 4 videos</p>
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-book"></i>
-                            <h4>Migration Playbooks</h4>
-                            <p>Katalon to WebDriver/Playwright</p>
-                        </div>
-                    </section>
-                
-                    <!-- TECH STACK -->
-                    <section class="tech-stack">
-                        <h4>My Stack</h4>
-                        <div class="tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">Groovy</span>
-                            <span class="tag">Selenium</span>
-                            <span class="tag">Playwright</span>
-                            <span class="tag">REST-assured</span>
-                            <span class="tag">Jenkins</span>
-                            <span class="tag">AWS</span>
-                            <span class="tag">SQL</span>
-                        </div>
-                    </section>
-                
-                    <!-- CTA -->
-                    <div class="cta-wrapper">
-                        <a href="https://github.com/AutomationByEthan/sample-script" target="_blank" rel="noopener"
-                           class="button primary" onclick="gtag('event', 'github_click', { 'event_category': 'Engagement', 'event_label': 'About GitHub CTA' });">
-                            View Sample Script
-                        </a>
-                        <a href="https://www.youtube.com/@KyperianAutomation" target="_blank" rel="noopener"
-                           class="button" onclick="gtag('event', 'youtube_click', { 'event_category': 'Engagement', 'event_label': 'About YouTube CTA' });">
-                            Watch Tutorials
-                        </a>
-                    </div>
-                
-                    <!-- JSON-LD -->
-                    <script type="application/ld+json">
-                    {
-                      "@context": "https://schema.org",
-                      "@type": "Person",
-                      "name": "Ethan Elgin",
-                      "jobTitle": "Senior QA Automation Engineer",
-                      "url": "https://www.kyperianautomation.com",
-                      "sameAs": [
-                        "https://www.linkedin.com/in/elginethan",
-                        "https://github.com/AutomationByEthan/sample-script",
-                        "https://www.youtube.com/@KyperianAutomation"
-                      ],
-                      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Northwest Missouri State University" },
-                      "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Smithville",
-                        "addressRegion": "MO",
-                        "postalCode": "64089",
-                        "addressCountry": "US"
-                      },
-                      "email": "elgin.ethan@gmail.com",
-                      "telephone": "(816) 738-4053"
-                    }
-                    </script>
-                </article>
         
             <!-- Contact -->
             <article id="contact" role="region" aria-labelledby="contact-title">
@@ -563,6 +564,7 @@ public void loginAndValidate() throws Exception {
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
 
 

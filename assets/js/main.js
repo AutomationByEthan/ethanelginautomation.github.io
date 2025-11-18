@@ -1,3 +1,11 @@
+if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    return;   // ← This stops ALL the old SPA/modal behavior on real subpages
+}
+// =====================================================================
+
+(function($) {
+    'use strict';
+
 (function($) {
     'use strict';// DOM Elements
 const $window = $(window);
@@ -256,3 +264,4 @@ $main_articles.hide();
 if (location.hash !== '' && location.hash !== '#') {
     $window.on('load', () => $main._show(location.hash.substr(1), true));
 }})(jQuery);
+

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     
-    <!-- SEO – this page will rank for “selenium testimonials”, “katalon studio reviews”, etc. -->
+    <!-- SEO -->
     <meta name="description" content="Real client results: 80% faster regression, 18+ months zero maintenance, trusted by federal agencies. See what QA leads & product owners say." />
     <meta name="keywords" content="selenium testimonials, katalon studio reviews, ui automation case studies, qa automation success stories" />
     <meta name="author" content="Ethan Elgin" />
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Client Testimonials – Kyperian Automation" />
     <meta property="og:description" content="80% faster regression • Scripts running 18+ months untouched • Trusted by federal agencies & startups" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.kyperianautomation.com/testimonials.html" />
+    <meta property="og:url" content="https://www.kyperianautomation.com/testimonials" /> <!-- no .html -->
     <meta property="og:image" content="https://www.kyperianautomation.com/images/bg.jpg" />
     
     <!-- Twitter -->
@@ -23,8 +23,8 @@
     <meta name="twitter:description" content="Federal agencies & startups: 18+ months stability, zero flaky tests" />
     <meta name="twitter:image" content="https://www.kyperianautomation.com/images/bg.jpg?v=3" />
     
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.kyperianautomation.com/testimonials.html" />
+    <!-- Canonical – clean URL -->
+    <link rel="canonical" href="https://www.kyperianautomation.com/testimonials" />
     
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNMM54RXBC"></script>
@@ -40,11 +40,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body>
+<body> <!-- no is-preload -->
 
 <div id="wrapper">
 
-    <!-- Clean subpage header -->
+    <!-- Header -->
     <header id="header" class="alt">
         <div class="logo">
             <span class="icon brands fa-galactic-republic"></span>
@@ -69,7 +69,6 @@
             
             <h1 id="testimonials-title" class="visually-hidden">Client Testimonials – Kyperian Automation</h1>
             
-            <!-- Your original hero + all content below – only #contact links changed -->
             <div class="testimonials-hero">
                 <h2>Real Results from Real Teams</h2>
                 <p class="metric">80% faster regression • 18+ months minimal maintenance • Federal & enterprise trusted</p>
@@ -115,21 +114,21 @@
             
             <div class="trust-badges">
                 <div class="badge-item">
-                    <img src="images/badge-federal.svg" alt="Trusted by Federal Agencies" loading="lazy" />
+                    <img src="/images/badge-federal.svg" alt="Trusted by Federal Agencies" loading="lazy" />
                     <span>Trusted by Federal Agencies</span>
                 </div>
                 <div class="badge-item">
-                    <img src="images/badge-18months.svg" alt="18+ Months Stability" loading="lazy" />
+                    <img src="/images/badge-18months.svg" alt="18+ Months Stability" loading="lazy" />
                     <span>18+ Months Stability</span>
                 </div>
                 <div class="badge-item">
-                    <img src="images/badge-moneyback.svg" alt="30-Day Money-Back Guarantee" loading="lazy" />
+                    <img src="/images/badge-moneyback.svg" alt="30-Day Money-Back Guarantee" loading="lazy" />
                     <span>30-Day Money-Back Guarantee</span>
                 </div>
             </div>
             
             <div class="cta-final">
-                <a href="/contact.html" 
+                <a href="/contact" 
                    class="button primary lg" 
                    onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Testimonials Final CTA' });">
                    Book Your Free 15-Min Demo
@@ -138,11 +137,11 @@
         </article>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer – clean URL -->
     <footer id="footer">
         <p class="copyright">
             © Kyperian Automation. All rights reserved. | 
-            <a href="/contact.html">Contact Us</a> | 
+            <a href="/contact">Contact Us</a> | 
             Follow us: 
             <a href="https://github.com/AutomationByEthan/sample-script" class="icon brands fa-github"><span class="label">GitHub</span></a>
             <a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a>
@@ -159,12 +158,3 @@
 <script src="/assets/js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-

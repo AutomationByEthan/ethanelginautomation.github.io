@@ -39,6 +39,23 @@
     <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    body.is-subpage #header .content,
+    body.is-subpage #header nav { display: none !important; }
+    body.is-subpage #header {
+        height: 90px;
+        background: rgba(27, 31, 34,0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding: 0 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+    body.is-subpage #header .logo {
+        visibility: visible; opacity: 1; width: 4.5rem; height: 4.5rem;
+    }
+</style>
+
 </head>
 <body class="is-subpage">
 
@@ -156,4 +173,5 @@
 <script src="/assets/js/main.js"></script>
 </body>
 </html>
+
 

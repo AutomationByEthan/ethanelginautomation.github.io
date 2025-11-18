@@ -12,7 +12,7 @@
     <meta property="og:title" content="Portfolio – Watch Selenium & Katalon Automation Demos" />
     <meta property="og:description" content="60-second live demos, real case studies, and free sample scripts from a 12-year Selenium/Katalon engineer." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.kyperianautomation.com/portfolio.html" />
+    <meta property="og:url" content="https://www.kyperianautomation.com/portfolio" /> <!-- no .html -->
     <meta property="og:image" content="https://www.kyperianautomation.com/images/bg.jpg" />
     
     <!-- Twitter Card -->
@@ -21,10 +21,10 @@
     <meta name="twitter:description" content="60-second live demos, real case studies, and free sample scripts." />
     <meta name="twitter:image" content="https://www.kyperianautomation.com/images/bg.jpg?v=3" />
     
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.kyperianautomation.com/portfolio.html" />
+    <!-- Canonical – clean URL -->
+    <link rel="canonical" href="https://www.kyperianautomation.com/portfolio" />
     
-    <!-- Google tag -->
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNMM54RXBC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -38,89 +38,77 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body>
+<body> <!-- no is-preload -->
 
-    <div id="wrapper">
+<div id="wrapper">
 
-        <!-- Header – simplified for subpages -->
-        <header id="header" class="alt">
-            <div class="logo">
-                <span class="icon brands fa-galactic-republic"></span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li class="active"><a href="/portfolio">Portfolio</a></li>   <!-- active + no .html -->
-                    <li><a href="/testimonials">Testimonials</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Main – only the Portfolio article -->
-        <div id="main">
-            <article id="portfolio" class="style1 active" role="region" aria-labelledby="portfolio-title">
-                <div class="close" aria-label="Close modal"></div>
-                <header class="subpage-header"><h2>Portfolio</h2></header>
-                <h2 id="portfolio-title" class="major">Watch Automation in Action</h2>
-                <p class="subtitle">60-second demos — no setup, real Selenium & Katalon scripts running live.</p>
-
-                <!-- === ALL YOUR ORIGINAL PORTFOLIO CONTENT BELOW (unchanged) === -->
-                <!-- VIDEO GRID -->
-                <div class="video-grid">
-                    <div class="video-card">
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/t8zQLKqORR4" title="Free Selenium Login Test – Runs in 60 Seconds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                        <h3>Free Selenium Login Test (60s)</h3>
-                        <p>No setup. Real browser. Instant proof.</p>
-                        <span class="badge">Selenium</span>
-                    </div>
-                    <!-- (keep the other 3 videos exactly as you had them) -->
-                    <!-- ... -->
-                </div>
-
-                <!-- CASE STUDIES, SAMPLE OUTPUTS, CTA – all unchanged except one fix below -->
-                <div class="cta-wrapper">
-                    <a href="/contact.html" class="button primary" 
-                       onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Portfolio CTA' });">
-                       Book a 15-Min Script Review (Free)
-                    </a>
-                </div>
-            </article>
+    <!-- Header -->
+    <header id="header" class="alt">
+        <div class="logo">
+            <span class="icon brands fa-galactic-republic"></span>
         </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li class="active"><a href="/portfolio">Portfolio</a></li>   <!-- active + no .html -->
+                <li><a href="/testimonials">Testimonials</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Footer -->
-        <footer id="footer">
-            <p class="copyright">
-                © Kyperian Automation. All rights reserved. | 
-                <a href="/contact.html">Contact Us</a> | 
-                Follow us: 
-                <a href="https://github.com/AutomationByEthan/sample-script" class="icon brands fa-github"><span class="label">GitHub</span></a>
-                <a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a>
-                <a href="https://www.youtube.com/@KyperianAutomation" class="icon brands fa-youtube"><span class="label">YouTube</span></a>
-            </p>
-        </footer>
+    <!-- Main – only the Portfolio article -->
+    <div id="main">
+        <article id="portfolio" class="style1 active" role="region" aria-labelledby="portfolio-title">
+            <div class="close" aria-label="Close modal"></div>
+            <header class="subpage-header"><h2>Portfolio</h2></header>
+            <h2 id="portfolio-title" class="major">Watch Automation in Action</h2>
+            <p class="subtitle">60-second demos — no setup, real Selenium & Katalon scripts running live.</p>
+
+            <!-- === ALL YOUR ORIGINAL PORTFOLIO CONTENT BELOW (unchanged) === -->
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/t8zQLKqORR4" title="Free Selenium Login Test – Runs in 60 Seconds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <h3>Free Selenium Login Test (60s)</h3>
+                    <p>No setup. Real browser. Instant proof.</p>
+                    <span class="badge">Selenium</span>
+                </div>
+                <!-- Keep your other 3 videos exactly as you have them -->
+                <!-- ... -->
+            </div>
+
+            <!-- CTA fixed -->
+            <div class="cta-wrapper">
+                <a href="/contact" class="button primary" 
+                   onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Portfolio CTA' });">
+                   Book a 15-Min Script Review (Free)
+                </a>
+            </div>
+        </article>
     </div>
 
-    <div id="bg"></div>
+    <!-- Footer – clean URL -->
+    <footer id="footer">
+        <p class="copyright">
+            © Kyperian Automation. All rights reserved. | 
+            <a href="/contact">Contact Us</a> | 
+            Follow us: 
+            <a href="https://github.com/AutomationByEthan/sample-script" class="icon brands fa-github"><span class="label">GitHub</span></a>
+            <a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a>
+            <a href="https://www.youtube.com/@KyperianAutomation" class="icon brands fa-youtube"><span class="label">YouTube</span></a>
+        </p>
+    </footer>
+</div>
 
-    <!-- Scripts -->
-    <script src="/assets/js/browser.min.js"></script>
-    <script src="/assets/js/breakpoints.min.js"></script>
-    <script src="/assets/js/util.js"></script>
-    <script src="/assets/js/main.js"></script>
+<div id="bg"></div>
+
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-

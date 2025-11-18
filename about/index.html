@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     
-    <!-- SEO – highly targeted for personal branding + services -->
+    <!-- SEO -->
     <meta name="description" content="Meet Ethan Elgin: 12+ years building unbreakable Selenium & Katalon Studio automation. Trusted by USDA & federal agencies. Cut manual QA effort by 80%." />
     <meta name="keywords" content="ethan elgin, selenium expert, katalon studio consultant, ui automation engineer, qa automation consulting" />
     <meta name="author" content="Ethan Elgin" />
@@ -14,7 +14,7 @@
     <meta property="og:title" content="About Ethan Elgin – Senior QA Automation Engineer" />
     <meta property="og:description" content="12+ years • 100+ production scripts • USDA & federal trusted • 80% less manual testing" />
     <meta property="og:type" content="profile" />
-    <meta property="og:url" content="https://www.kyperianautomation.com/about.html" />
+    <meta property="og:url" content="https://www.kyperianautomation.com/about" /> <!-- no .html -->
     <meta property="og:image" content="https://www.kyperianautomation.com/images/bg.jpg" />
     
     <!-- Twitter -->
@@ -23,9 +23,9 @@
     <meta name="twitter:description" content="12 years building UI automation that never breaks. USDA trusted. Free script reviews." />
     <meta name="twitter:image" content="https://www.kyperianautomation.com/images/bg.jpg?v=3" />
     
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.kyperianautomation.com/about.html" />
-    
+    <!-- Canonical – clean URL -->
+    <link rel="canonical" href="https://www.kyperianautomation.com/about" />
+
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNMM54RXBC"></script>
     <script>
@@ -40,26 +40,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body>
+<body> <!-- no is-preload class on subpages -->
 
 <div id="wrapper">
 
-    <!-- Clean subpage header -->
+    <!-- Subpage header -->
     <header id="header" class="alt">
         <div class="logo">
             <span class="icon brands fa-galactic-republic"></span>
         </div>
         <nav>
-            <li><a href="/">Home</a></li>
-            <li class="active"><a href="/about.html">About</a></li>   
-            <li><a href="/portfolio.html">Portfolio</a></li>
-            <li><a href="/testimonials.html">Testimonials</a></li>
-            <li><a href="/services.html">Services</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/about">About</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/testimonials">Testimonials</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Main – ONLY the About article -->
+    <!-- Main – only the About article -->
     <div id="main">
         <article id="about" class="style1 active" role="region" aria-labelledby="about-title">
             <div class="close" aria-label="Close modal"></div>
@@ -67,7 +69,6 @@
             
             <h1 id="about-title" class="visually-hidden">About Ethan Elgin – Kyperian Automation</h1>
             
-            <!-- Everything below is your original content (unchanged except # links fixed) -->
             <section class="about-hero">
                 <h2>Meet the Engineer Behind the Automation</h2>
                 <p class="metric">12+ years • 100+ scripts • 20% manual effort cut • USDA & Federal trusted</p>
@@ -134,7 +135,7 @@
                 </a>
             </div>
             
-            <!-- JSON-LD stays exactly as you had it -->
+            <!-- JSON-LD -->
             <script type="application/ld+json">
             {
               "@context": "https://schema.org",
@@ -162,11 +163,11 @@
         </article>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer – clean URL -->
     <footer id="footer">
         <p class="copyright">
             © Kyperian Automation. All rights reserved. | 
-            <a href="/contact.html">Contact Us</a> | 
+            <a href="/contact">Contact Us</a> | 
             Follow us: 
             <a href="https://github.com/AutomationByEthan/sample-script" class="icon brands fa-github"><span class="label">GitHub</span></a>
             <a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a>
@@ -183,12 +184,3 @@
 <script src="/assets/js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-

@@ -3,19 +3,17 @@
 <head>
     <title>Kyperian Automation | UI Automation That Never Breaks</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />    
-    <meta name="description" content="UI automation consulting with Katalon Studio & Selenium. Reduce QA time by 90%. Book a 15-min demo." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />  
+    <meta name="description" content="Cut regression testing by 80% with unbreakable Selenium & Katalon Studio automation. Free 15-min demo. Trusted by USDA & federal agencies." />
     <meta name="keywords" content="UI automation, Katalon Studio, Selenium, test automation, regression testing, QA consulting, Kyperian Automation" />
     <meta name="author" content="Ethan Elgin" />
     
-    <!-- Open Graph / LinkedIn + Facebook -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Kyperian Automation | UI Automation That Never Breaks" />
     <meta property="og:description" content="UI automation that never breaks. Selenium + Katalon Studio. Book a 15-min demo → 90% faster QA." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.kyperianautomation.com/" />
     <meta property="og:image" content="https://www.kyperianautomation.com/images/bg.jpg" />
-    <meta property="og:image:secure_url" content="https://www.kyperianautomation.com/images/bg.jpg" />
-    <meta property="og:image:alt" content="Kyperian Automation – Reliable UI Testing with Katalon & Selenium" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     
@@ -28,7 +26,7 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://www.kyperianautomation.com/" />
     
-    <!-- Google tag (gtag.js) -->
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNMM54RXBC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -36,42 +34,44 @@
       gtag('js', new Date());
       gtag('config', 'G-CNMM54RXBC');
     </script>
+    
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body class="is-preload">
-    <!-- Wrapper -->
     <div id="wrapper">
         <!-- Header -->
-            <header id="header">
-                <div class="logo">
-                    <span class="icon brands fa-galactic-republic" aria-label="Kyperian Automation logo"></span>
+        <header id="header">
+            <div class="logo">
+                <span class="icon brands fa-galactic-republic" aria-label="Kyperian Automation logo"></span>
+            </div>
+            <div class="content fade-in" data-delay="0.2s">
+                <div class="inner">
+                    <h1 class="fade-in" data-delay="0.4s">Kyperian Automation</h1>
+                    <p class="highlight-main fade-in" data-delay="0.6s">
+                        Scalable UI Automation with Selenium or Katalon Studio<br />
+                        <span class="highlight-metric">Cut Regression Testing by 80%</span>
+                    </p>
+                    <a href="/contact" 
+                       class="button primary fade-in" 
+                       data-delay="0.8s" 
+                       onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Free Consultation CTA' });">
+                       Get a Free Consultation
+                    </a>
                 </div>
-                <div class="content fade-in" data-delay="0.2s">
-                    <div class="inner">
-                        <h1 class="fade-in" data-delay="0.4s">Kyperian Automation</h1>
-                        <p class="highlight-main fade-in" data-delay="0.6s">Scalable UI Automation with Selenium or Katalon Studio<br /><span class="highlight-metric">Cut Regression Testing by 80%</span></p>
-                        <a href="#contact" 
-                           class="button primary fade-in" 
-                           data-delay="0.8s" 
-                           onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Free Consultation CTA' });" 
-                           aria-label="Book a free 15-minute consultation with Kyperian Automation">
-                           Get a Free Consultation
-                        </a>
-                    </div>
-                </div>
-                <nav role="navigation" aria-label="Main navigation for Kyperian Automation" class="fade-in" data-delay="1s">
-                    <ul>                        
-                        <li><a href="#about-us" aria-label="About Kyperian Automation's mission and expertise">About</a></li>
-                        <li><a href="#portfolio" aria-label="View a demo of Kyperian Automation's UI automation">Portfolio</a></li>
-                        <li><a href="#testimonials" aria-label="View client success stories for Kyperian Automation">Testimonials</a></li>
-                        <li><a href="#services" aria-label="Learn about Kyperian Automation's services and benefits">Services</a></li>
-                        <li><a href="#contact" aria-label="Book a free 15-minute consultation with Kyperian Automation">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
+            </div>
+            <nav role="navigation" class="fade-in" data-delay="1s">
+                <ul>
+                    <li><a href="/about"        onclick="if(location.pathname === '/' || location.pathname === '/index.html') { event.preventDefault(); document.querySelector('#about-us').scrollIntoView({behavior:'smooth'}); }">About</a></li>
+                    <li><a href="/portfolio"    onclick="if(location.pathname === '/' || location.pathname === '/index.html') { event.preventDefault(); document.querySelector('#portfolio').scrollIntoView({behavior:'smooth'}); }">Portfolio</a></li>
+                    <li><a href="/testimonials" onclick="if(location.pathname === '/' || location.pathname === '/index.html') { event.preventDefault(); document.querySelector('#testimonials').scrollIntoView({behavior:'smooth'}); }">Testimonials</a></li>
+                    <li><a href="/services"     onclick="if(location.pathname === '/' || location.pathname === '/index.html') { event.preventDefault(); document.querySelector('#services').scrollIntoView({behavior:'smooth'}); }">Services</a></li>
+                    <li><a href="/contact"      onclick="if(location.pathname === '/' || location.pathname === '/index.html') { event.preventDefault(); document.querySelector('#contact').scrollIntoView({behavior:'smooth'}); }">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
         <!-- Main -->
         <div id="main">
@@ -198,7 +198,7 @@
                 <div class="services-hero">
                     <h2>UI Automation That Never Breaks</h2>
                     <p class="metric">80% faster regression • Zero flaky tests • Selenium or Katalon Studio</p>
-                    <a href="#contact" 
+                    <a href="/contact" 
                        class="button primary lg" 
                        onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Hero Demo CTA' });">
                        Book Free 15-Min Demo
@@ -236,7 +236,7 @@
                         <li><strong>$5,000</strong> – Starter suite (10 scripts)</li>
                         <li><strong>Enterprise</strong> – SLAs, CI/CD, training</li>
                     </ul>
-                    <a href="#contact" 
+                    <a href="/contact" 
                        class="button" 
                        onclick="gtag('event', 'quote_request', { 'event_category': 'Engagement', 'event_label': 'Get Quote CTA' });">
                        Get Quote in 24 hrs
@@ -261,7 +261,7 @@
             
                 <!-- FINAL CTA -->
                 <div class="cta-final">
-                    <a href="#contact" 
+                    <a href="/contact" 
                        class="button primary lg" 
                        onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Final Demo CTA' });">
                        Schedule Your Free Demo
@@ -390,7 +390,7 @@ public void loginAndValidate() throws Exception {
             
             <!-- CTA -->
                 <div class="cta-wrapper">
-                    <a href="#contact" class="button primary" 
+                    <a href="/contact" class="button primary" 
                        onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Watch Demo CTA' });">
                        Book a 15-Min Script Review (Free)
                     </a>
@@ -484,7 +484,7 @@ public void loginAndValidate() throws Exception {
             
                 <!-- FINAL CTA -->
                 <div class="cta-final">
-                    <a href="#contact" 
+                    <a href="/contact" 
                        class="button primary lg" 
                        onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Testimonials Final CTA' });">
                        Book Your Free 15-Min Demo
@@ -534,25 +534,17 @@ public void loginAndValidate() throws Exception {
         </div>
 
         <!-- Footer -->
-            <footer id="footer" role="contentinfo" aria-label="Kyperian Automation footer">
+             <footer id="footer">
                 <p class="copyright">
                     © Kyperian Automation. All rights reserved. | 
-                    <a href="#contact" onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Contact Us Footer Link' });" aria-label="Contact Kyperian Automation">Contact Us</a> | 
+                    <a href="/contact">Contact Us</a> | 
                     Follow us: 
-                    <a href="https://github.com/AutomationByEthan/sample-script" class="icon brands fa-github" aria-label="Follow Kyperian Automation on GitHub"><span class="label">GitHub</span></a>
-                    <a href="https://www.linkedin.com/in/elginethan/" target="_blank" 
-                       onclick="gtag('event', 'social_click', { 'event_category': 'Engagement', 'event_label': 'LinkedIn Footer' });" 
-                       class="icon brands fa-linkedin-in" aria-label="Connect with Ethan Elgin on LinkedIn">
-                       <span class="label">LinkedIn</span>
-                    </a>
-                    <a href="https://www.youtube.com/@KyperianAutomation" target="_blank" 
-                       onclick="gtag('event', 'social_click', { 'event_category': 'Engagement', 'event_label': 'YouTube Footer' });" 
-                       class="icon brands fa-youtube" aria-label="Watch Kyperian Automation demos on YouTube">
-                       <span class="label">YouTube</span>
-                    </a>
+                    <a href="https://github.com/AutomationByEthan/sample-script" class="icon brands fa-github"><span class="label">GitHub</span></a>
+                    <a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a>
+                    <a href="https://www.youtube.com/@KyperianAutomation" class="icon brands fa-youtube"><span class="label">YouTube</span></a>
                 </p>
             </footer>
-        </div>
+            </div>
 
     <!-- Background -->
     <div id="bg"></div>
@@ -564,10 +556,3 @@ public void loginAndValidate() throws Exception {
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-

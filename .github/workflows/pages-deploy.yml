@@ -1,0 +1,74 @@
+# Simple GitHub Pages deploy workflow (official template)
+name: Deploy static content to Pages
+
+on:
+  # Trigger on push to main (production)
+  push:
+    branches: ["main"]
+    paths: ["**"]
+  # Trigger on PRs to main (for previews)
+  pull_request:
+    branches: ["main"]
+    paths: ["**"]
+
+  # Trigger on push to any other branch (previews)
+  push:
+    branches-ignore: ["main"]
+    paths: ["**"]
+
+# Permissions for deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  pull-requests: write
+
+# Concurrency to avoid overlapping runs
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: false  # Optional
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'  # Upload root (your HTML files)
+
+  # Single deploy job for both production & previews
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # Auto-comment preview URL on PRs
+      - name: Comment preview URL on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = '${{ steps.deployment.outputs.page_url }}';
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.name,
+              body: `🔍 **Preview ready!** Live site with your changes: ${url}`
+            });
